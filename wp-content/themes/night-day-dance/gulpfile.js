@@ -60,7 +60,7 @@ gulp.task('browser-sync', function() {
    ];
 
     browserSync.init(files, {
-        proxy: 'redstarter.dev',
+        proxy: 'night_day_dance.dev',
     });
 });
 
