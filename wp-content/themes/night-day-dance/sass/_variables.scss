@@ -2,22 +2,33 @@
 
 $base__space-unit: 1.5em;
 
+// Media queries
+
+$desktop-width: 1024px;
+
 // Colors
 
 $color__background-body: #fff;
-$color__text-main: #404040;
+$color__text-main: #373737;
 
 $color__background-screen: #f1f1f1;
-$color__text-screen: #21759b;
+$color__text-screen: #373737;
 
 $color__background-hr: #ccc;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__border-abbr: #666;
 
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link: #d12027;
+$color__link-visited: #d12027;
+$color__link-hover: #282f72;
+
+$color__brand-one: #282f72;
+$color__brand-two: #b0e2f8;
+$color__brand-three: #d12027;
+$color__brand-four: #f6c11e;
+$color__brand-five: #facf55;
+$color__brand-six: #f0efef;
 
 // Typography
 
