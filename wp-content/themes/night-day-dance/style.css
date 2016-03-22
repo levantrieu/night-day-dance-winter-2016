@@ -699,3 +699,5 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+html {
+  font-size: 10px; }

@@ -10,3 +10,59 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
+// Media queries
+
+@mixin desktop {
+  @media all and (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+// Styles
+
+@mixin button-action {
+	padding: 3rem;
+	display: flex;
+	justify-content: center;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		filter: brightness(1.25);
+	}
+}
+
+@mixin button-info-one {
+	background-color: rgba(0, 0, 0, 0);
+	border: 5px solid $color__brand-one;
+	padding: 3rem;
+	display: flex;
+	justify-content: center;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		background-color: rgba(36, 43, 115, 1);
+	}
+}
+
+@mixin button-info-two {
+	background-color: rgba(0, 0, 0, 0);
+	border: 5px solid $color__brand-three;
+	padding: 3rem;
+	display: flex;
+	justify-content: center;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		background-color: rgba(232, 192, 55, 1);
+	}
+}

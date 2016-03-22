@@ -63,3 +63,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "content";
 @import "media";
 @import "page-templates";
+
+// Global styles
+
+html {
+	font-size: 10px;
+}
