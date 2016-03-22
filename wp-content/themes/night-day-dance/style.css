@@ -1,9 +1,9 @@
 /*!
-Theme Name: Night and Day Dance
+Theme Name: RED Starter Theme
 Theme URI: http://underscores.me/
-Author: Ardallan Memar, John Peacock and Levan Trieu
+Author: RED Academy
 Author URI: http://www.redacademy.com
-Description: A WordPress theme for Night and Day Dance.
+Description: A WordPress starter theme for RED Academy students.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -272,7 +272,7 @@ button,
 input,
 select,
 textarea {
-  color: #373737;
+  color: #404040;
   font-family: sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -450,11 +450,11 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: #d12027; }
+  color: royalblue; }
   a:visited {
-    color: #d12027; }
+    color: purple; }
   a:hover, a:focus, a:active {
-    color: #282f72; }
+    color: midnightblue; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -542,7 +542,7 @@ a {
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #373737;
+    color: #21759b;
     display: block;
     font-size: 14px;
     font-size: 0.875rem;
@@ -698,6 +698,8 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+/* Front page */
+*/
 /* Front page */
 html {
   font-size: 10px; }
