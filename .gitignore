@@ -30,6 +30,10 @@ access_log
 *.tar
 *.zip
 
+# Ignore gulpfile #
+# =============== #
+gulpfile.js
+
 # Ignore everything in the root except the "wp-content" directory. #
 # ================================================================ #
 /*
