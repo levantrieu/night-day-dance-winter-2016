@@ -20,3 +20,30 @@ function red_starter_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'red_starter_body_classes' );
+
+/*
+** Filter archive post loops.
+*/
+
+function ndd_modify_archive_loop( $query ) {
+	if ( is_post_type_archive( array ( 'instructor' ) ) && !is_admin() && $query->is_main_query() ) {
+		$query->set( 'orderby', 'title' );
+		$query->set( 'order', 'ASC' );
+		$query->set( 'posts_per_page', 12 );
+	}
+}
+add_action( 'pre_get_posts', 'ndd_modify_archive_loop' );
+
+/*
+** Filter title archive.
+*/
+
+function ndd_archive_title( $title ) {
+	if ( is_post_type_archive( array( 'instructor') ) ) {
+		$title = 'Meet the Team';
+	} elseif ( is_tax( 'instructor-type' ) ) {
+		$title = single_term_title( '', false );
+	}
+	return $title;
+}
+	add_filter( 'get_the_archive_title', 'ndd_archive_title' );
