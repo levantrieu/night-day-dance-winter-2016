@@ -9,26 +9,35 @@ get_header(); ?>
 
 text from single-classes.php
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area site-container">
+	<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+	<?php while ( have_posts() ) : the_post(); ?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<header class="class-header">
+				<?php the_title( '<h1 class="class-name">', '</h1>' ); ?>
+				<?php if ( has_post_thumbnail() ) : ?>
+					<?php the_post_thumbnail( 'large' ); ?>
+				<?php endif; ?>
+			</header><!-- .entry-header -->
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+			<div class="class-description">
+				<?php the_content(); ?>
+				<?php
+					wp_link_pages( array(
+						'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+						'after'  => '</div>',
+					) );
+				?>
+			</div>
+			<p class="class-price"><?php echo CFS()->get( 'price' ); ?></p>
+			<p class="class-length"><?php echo CFS()->get( 'class_length' ); ?></p>
+			<p class="class-length"><?php echo CFS()->get( 'what_to_bring' ); ?></p>
+			<!-- .entry-content -->
+		</article>
+	<?php endwhile; // End of the loop. ?>
 
-			<?php the_post_navigation(); ?>
+	</main><!-- #main -->
+</div><!-- #primary -->
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
-		<?php endwhile; // End of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -39,9 +39,12 @@ add_action( 'pre_get_posts', 'ndd_modify_archive_loop' );
 */
 
 function ndd_archive_title( $title ) {
-	if ( is_post_type_archive( array( 'instructor') ) ) {
+	if ( is_post_type_archive( array( 'instructors') ) ) {
 		$title = 'Meet the Team';
-	} elseif ( is_tax( 'instructor-type' ) ) {
+	} if  ( is_post_type_archive( array( 'classes') ) ) {
+		$title = 'Our Packages';
+	}
+	elseif ( is_tax( 'instructor-type' && 'class-type') ) {
 		$title = single_term_title( '', false );
 	}
 	return $title;
