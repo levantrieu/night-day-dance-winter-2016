@@ -50,3 +50,23 @@ function ndd_archive_title( $title ) {
 	return $title;
 }
 	add_filter( 'get_the_archive_title', 'ndd_archive_title' );
+
+// add custom logo and url to login page
+function nnd_the_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'nnd_the_url' );
+/**
+*   adds a logo to the admin login page and changes the link to the website root
+*/
+function nnd_login_logo() {
+     echo '<style type="text/css">
+         h1 a { background-image:url('.get_template_directory_uri().'/images/night-day-dance-logo.jpg) !important;
+				 background-size:contain !important;
+			   width:100% !important;}
+     </style>';
+}
+add_action('login_head', 'nnd_login_logo');
+
+
+?>

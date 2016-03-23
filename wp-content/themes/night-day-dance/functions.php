@@ -45,7 +45,7 @@ add_action( 'after_setup_theme', 'red_starter_setup' );
  * @global int $content_width
  */
 function red_starter_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'red_starter_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'red_starter_content_width', 1024 );
 }
 add_action( 'after_setup_theme', 'red_starter_content_width', 0 );
 
@@ -78,6 +78,33 @@ function red_starter_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 	return $stylesheet_uri;
 }
 add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
+
+/**
+* enqueues our external fontawesome stylesheet to use for social icons and mobile menu
+*/
+function enqueue_fontawesome_stylesheets(){
+	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+}
+add_action('wp_enqueue_scripts','enqueue_fontawesome_stylesheets');
+
+/**
+* enqueues our external jQuery to use for mobile menu
+*/
+if (!is_admin()) add_action("wp_enqueue_scripts", "ndd_jquery_enqueue", 11);
+function ndd_jquery_enqueue() {
+   wp_deregister_script('jquery');
+   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js", false, null);
+   wp_enqueue_script('jquery');
+}
+/**
+ * Enqueue custom mobile javascript
+ */
+function ndd_adding_scripts() {
+wp_register_script('mobile_script', get_template_directory_uri() . '/build/js/mobile-menu.min.js', array('jquery'),'1.1', true);
+wp_enqueue_script('mobile_script');
+}
+
+add_action( 'wp_enqueue_scripts', 'ndd_adding_scripts' );
 
 /**
  * Enqueue scripts and styles.
