@@ -51,6 +51,7 @@ function ndd_archive_title( $title ) {
 }
 	add_filter( 'get_the_archive_title', 'ndd_archive_title' );
 
+
 // add custom logo and url to login page
 function nnd_the_url() {
     return home_url();
