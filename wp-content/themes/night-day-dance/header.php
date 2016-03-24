@@ -40,4 +40,3 @@
 				</header><!-- #masthead -->
 
 				<div id="content" class="site-content">
->>>>>>> mobile menu files added styles added screenshot functions added

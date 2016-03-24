@@ -26,6 +26,7 @@ text from single-instructors.php
 			?>
 
 		<?php endwhile; // End of the loop. ?>
+		<p class="contact-instructor"><?php echo CFS()->get( 'contact' ); ?></p>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
