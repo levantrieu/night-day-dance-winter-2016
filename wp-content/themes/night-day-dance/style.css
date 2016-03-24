@@ -586,15 +586,9 @@ nav {
 a {
   color: #d12027; }
   a:visited {
-<<<<<<< HEAD
     color: #d12027; }
   a:hover, a:focus, a:active {
     color: #282f72; }
-=======
-    color: purple; }
-  a:hover, a:focus, a:active {
-    color: midnightblue; }
->>>>>>> f07e282... mobile menu files added styles added screenshot functions added
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -603,14 +597,7 @@ a {
 /* Menus */
 .main-navigation {
   clear: both;
-<<<<<<< HEAD
-  display: block;
-  float: left;
-  width: 100%;
-  background-color: #000; }
-=======
   width: 100%; }
->>>>>>> f07e282... mobile menu files added styles added screenshot functions added
   .main-navigation ul {
     font-weight: 700;
     list-style: none;
