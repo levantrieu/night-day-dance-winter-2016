@@ -32,7 +32,7 @@ text from single-classes.php
 			</div>
 			<p class="class-price"><?php echo CFS()->get( 'price' ); ?></p>
 			<p class="class-length"><?php echo CFS()->get( 'class_length' ); ?></p>
-			<p class="class-length"><?php echo CFS()->get( 'what_to_bring' ); ?></p>
+			<p class="class-bring"><?php echo CFS()->get( 'things_to_bring' ); ?></p>
 			<!-- .entry-content -->
 		</article>
 	<?php endwhile; // End of the loop. ?>
