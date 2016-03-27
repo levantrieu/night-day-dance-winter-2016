@@ -16,9 +16,10 @@ text from category-group.php
     global $post;
     $categories = get_the_category();
     $category = $categories[0];
-    $cat_ID = '4';
+    $category_name = 'group';
+    $category_id = get_cat_ID($category_name);
 
-    $loop = new WP_Query( array( 'post_type' => 'classes', 'cat' => $cat_ID ) ); ?>
+    $loop = new WP_Query( array( 'post_type' => 'classes', 'cat' => $category_id ) ); ?>
 
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
