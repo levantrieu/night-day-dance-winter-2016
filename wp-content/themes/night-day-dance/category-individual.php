@@ -7,50 +7,28 @@
 
 get_header(); ?>
 
+text from category-individual.php
+
 <div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
 
     <?php
-    /*
-    * Loop through Categories and Display Posts within
-    */
-    $post_type = 'classes';
+    global $post;
+    $categories = get_the_category();
+    $category = $categories[0];
+    $cat_ID = '5';
 
-    // Get all the taxonomies for this post type
-    $taxonomies = get_object_taxonomies( array( 'post_type' => $post_type ) );
+    $loop = new WP_Query( array( 'post_type' => 'classes', 'cat' => $cat_ID ) ); ?>
 
-    foreach( $taxonomies as $taxonomy ) :
+    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-      // Gets every "category" (term) in this taxonomy to get the respective posts
-      $terms = get_terms( $taxonomy );
+      <?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); ?>
 
-      foreach( $terms as $term ) : ?>
-
-      <?php
-      $args = array(
-        'post_type' => $post_type,
-        'posts_per_page' => -1,  //show all posts
-        'tax_query' => array(
-          array(
-            'taxonomy' => $taxonomy,
-            'field' => 'slug',
-            'terms' => $term->slug,
-          )
-        )
-      );
-      $posts = new WP_Query($args);
-
-      if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
-
-      <?php if(has_post_thumbnail()) { ?>
-        <?php the_post_thumbnail(); ?>
-        <?php } ?>
-
-        <div><a href="<?php the_permalink(); ?>">See More</a></div>
-
-        <?php endwhile; endif; ?>
-      <?php endforeach;
-    endforeach; ?>
+      <div class="entry-content">
+        <?php the_content(); ?>
+        <?php the_post_thumbnail( 'mini-thumbnail' ); ?>
+      </div>
+    <?php endwhile; ?>
 
   </main><!-- #main -->
 </div><!-- #primary -->

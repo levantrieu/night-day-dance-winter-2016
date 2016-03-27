@@ -121,6 +121,10 @@ function red_starter_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
 
+
+
+
+
 /**
  * Custom template tags for this theme.
  */

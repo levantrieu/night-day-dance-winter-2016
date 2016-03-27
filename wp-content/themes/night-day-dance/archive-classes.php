@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-text from archive-class.php
+text from archive-classes.php
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -23,7 +23,7 @@ text from archive-class.php
 					<?php $terms = get_terms( 'class-type' ); ?>
 					<?php if ( ! empty( $terms ) ) : ?>
 						<?php foreach ( $terms as $term) : ?>
-								<h6><a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name; ?></a></h6>
+								<p><a href="<?php echo get_term_link( $term ); ?>">Class Type</a></p>
 						<?php endforeach; ?>
 					<?php endif; ?>
 
@@ -31,7 +31,7 @@ text from archive-class.php
 					<?php while ( have_posts() ) : the_post(); ?>
 						<div class="class-single">
 							<?php if ( has_post_thumbnail() ) : ?>
-								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'small' ); ?></a>
 							<?php endif; ?>
 							<p class="class-info-wrapper">
 								<?php the_title( '<span class="class-archive-name">', '</span>' ); ?>
