@@ -7,32 +7,33 @@
 
 get_header(); ?>
 
-text from single-classes.php
-
-<div id="primary" class="content-area site-container">
+<div id="primary" class="content-area classes site-container">
 	<main id="main" class="site-main" role="main">
-
-	<?php while ( have_posts() ) : the_post(); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 			<header class="class-header">
+				text from single-classes.php
 				<?php the_title( '<h1 class="class-name">', '</h1>' ); ?>
-				<?php if ( has_post_thumbnail() ) : ?>
-					<?php the_post_thumbnail( 'large' ); ?>
-				<?php endif; ?>
+				<div class="class-description">
+				<?php the_content(); ?>
+				</div>
 			</header><!-- .entry-header -->
 
-			<div class="class-description">
-				<?php the_content(); ?>
-				<?php
-					wp_link_pages( array(
-						'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-						'after'  => '</div>',
-					) );
-				?>
-			</div>
-			<p class="class-price"><?php echo CFS()->get( 'price' ); ?></p>
-			<p class="class-length"><?php echo CFS()->get( 'class_length' ); ?></p>
-			<p class="class-bring"><?php echo CFS()->get( 'things_to_bring' ); ?></p>
+			<section>
+				<?php if ( has_post_thumbnail() ) : ?>
+				<?php the_post_thumbnail( 'large' ); ?>
+				<?php endif; ?>
+			</section>
+
+			<section class="book-now">
+				<p class="class-price"><?php echo CFS()->get( 'price' ); ?></p>
+				<p class="class-length"><?php echo CFS()->get( 'class_length' ); ?></p>
+			</section>
+
+			<section class="class-bring">
+			  <p><?php echo CFS()->get( 'things_to_bring' ); ?></p>
+			</section>
 			<!-- .entry-content -->
 		</article>
 	<?php endwhile; // End of the loop. ?>
