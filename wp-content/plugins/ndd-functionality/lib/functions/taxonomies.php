@@ -5,7 +5,6 @@
  * @link  http://codex.wordpress.org/Function_Reference/register_taxonomy
  */
 
-// Add your custom taxonomies here...
 // Register Custom Taxonomy
 function register_dance_type_taxonomy() {
 
