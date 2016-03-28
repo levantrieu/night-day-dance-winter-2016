@@ -21,3 +21,38 @@ $(function() {
 		return false;
 	});
 });
+
+// sub-menu code //////////////////// sub-menu code /////////////////
+
+// $(document).ready(function() {
+// 	$("ul#primary-menu ul").css({ display: 'none' });
+// 	$("ul#primary-menu li").hover(function() {
+// 		$(this).find('ul.sub-menu')
+// 			.stop(true, true).delay(50).animate({ "height": "show", "opacity": "show" }, 200 );
+// 	}, function(){
+// 		$(this).find('ul.sub-menu')
+// 			.stop(true, true).delay(50).animate({ "height": "hide", "opacity": "hide" }, 200 );
+// 	});
+//
+// });
+
+
+// (function( $){
+// $( "#site-navigation" ).click(function() {
+// $( ".menu-item-has-children" ).slideToggle( "slow", function() {
+// // Animation complete.
+// });
+// });
+// } )( jQuery );
+
+
+// $('.menu-item').click(function(event) {
+//     if($(this).closest("li.menu-item").children("ul.sub-menu").length)
+//         {
+//             $('.sub-menu').slideToggle('fast');
+//         }
+//         else {
+//             $('.sub-menu').slideToggle('fast');
+//         }
+//         return false;
+//     });
