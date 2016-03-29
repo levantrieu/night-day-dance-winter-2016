@@ -9,64 +9,52 @@ get_header(); ?>
 
 text from archive-instructor.php
 
-<header class="page-header">
-	<?php
-	the_archive_title( '<h1 class="page-title">', '</h1>' );
-	the_archive_description( '<div class="taxonomy-description">', '</div>' );
-	?>
-</header>
-
 <?php
-// get all the categories from the database
-$cats = get_categories('taxonomy=types');
+/*
+* Loop through Categories and Display Posts within
+*/
+$post_type = 'instructors';
 
-// loop through the categries
-foreach ($cats as $cat) {
-	// setup the cateogory ID
-	$cat_id= $cat->term_id;
-	// Make a header for the cateogry
-	echo "<h2>".$cat->name."</h2>";
-	// create a custom wordpress query
+// Get all the taxonomies for this post type
+$taxonomies = get_object_taxonomies( array('post_type' => $post_type) );
 
+foreach( $taxonomies as $taxonomy ) :
+
+	// Gets every "category" (term) in this taxonomy to get the respective posts
+	$terms = get_terms( $taxonomy );
+
+	foreach( $terms as $term ) : ?>
+
+	<p><?php echo $term->name; ?></p>
+
+	<?php
 	$args = array(
+		'post_type' => $post_type,
+		'posts_per_page' => -1,  //show all posts
+		'hide_empty' => 0,
+		'post_status' => 'publish',
+		'order' => 'DESC',
 		'tax_query' => array(
 			array(
-				'taxonomy' => 'types',
+				'taxonomy' => $taxonomy,
 				'field' => 'slug',
-				'terms' => ".$cat->name."
-			)
-		)
-	);
-	$query = query_posts( $args );
-	// start the wordpress loop!
-	if (have_posts()) : while (have_posts()) : the_post(); ?>
+				'terms' => $term->slug,
+	)));
 
-	<?php
-	$custom = get_post_custom($post->ID);
-	$price = $custom["price"][0];
-	$short_text = $custom["short_text"][0];
-	?>
+	$posts = new WP_Query($args);
 
-	<div id="gallery" class="one_column">
+	if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
 
-		<ul class="portfolio">
+	<?php if(has_post_thumbnail()) { ?>
+		<div><?php the_post_thumbnail(); ?></div>
+		<?php } ?>
 
-			<li class="clearfix">
-				<div class="clearfix">
-					<span class="image-border"><a class="image-wrap" href="<?php the_permalink() ?>" title="<?php _e('Permanent Link to', 'theme1512');?> <?php the_title_attribute(); ?>" ><?php the_post_thumbnail( 'portfolio-post-thumbnail-xl' ); ?></a></span>
-					<div class="folio-desc">
-						<?php // create our link now that the post is setup ?>
-						<a href="<?php the_permalink();?>"><?php the_title(); ?> | <?php echo $price; ?></a><br />
-						<p><?php echo $short_text; ?></p>
-						<p><a href="<?php the_permalink(); ?>">View Details</a></p>
+			<?php  echo get_the_title(); ?>
 
-					</div>
-				</div>
-			</li>
-		</div>
+		<?php endwhile; endif; ?>
 
-	<?php endwhile; endif; // done our wordpress loop. Will start again for each category ?>
-	<?php wp_reset_query(); ?>
-	<?php } // done the foreach statement ?>
+	<?php endforeach;
+
+endforeach; ?>
 
 	<?php get_footer(); ?>

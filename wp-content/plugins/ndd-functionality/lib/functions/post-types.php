@@ -41,7 +41,6 @@ function register_dance_post_type() {
 		'description'           => 'Dance Instructors for Night and Day Dance',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'revisions', ),
-		'taxonomies' 						=> array('category', 'post_tag'),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
