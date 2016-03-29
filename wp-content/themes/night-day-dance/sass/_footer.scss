@@ -1,0 +1,155 @@
+.site-footer {
+  width:100%;
+  span {
+    text-transform:uppercase;
+    padding-left:15px;
+    margin-top:20px;
+
+  }
+  .footer-links {
+    display:none;
+    visibility: 0;
+  }
+  .form-wrapper {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-color:#1A2776;
+    color:white;
+    width:93%;
+    line-height:2rem;
+  }
+}
+
+.icon-wrapper{
+  display:flex;
+  justify-content:space-between;
+  width:150px;
+  color:white;
+  margin-bottom: 10px;
+
+}
+.icons{
+  border:2px solid;
+  border-radius:50%;
+  height:40px;
+  width:40px;
+  margin-top:1.5rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.sign-up {
+  background-color:#F6C11E;
+  border:none;
+  margin-top:20px;
+  width:150px;
+  height:35px;
+  color:white;
+  font-size:1rem;
+  border-radius:0;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+
+.first-last-wrapper{
+
+  .name {
+    width:48%;
+    margin-top:5px;
+    text-transform:uppercase;
+    border-radius:0;
+    height:25px;
+    border:none;
+    color:lightgray;
+    padding-left:20px;
+    padding-top:5px;
+  }
+
+
+}
+.email {
+  width:100%;
+  margin-top:10px;
+  text-transform:uppercase;
+  border-radius:0;
+  border:none;
+  padding-left:20px;
+  padding-top:5px;
+}
+
+.first-last-wrapper {
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+}
+
+.footer-form {
+  background-color:#1A2776;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.topic-wrapper {
+  display:flex;
+  justify-content:flex-start;
+  width:350px;
+}
+.button-wrapper {
+  display:flex;
+  justify-content:flex-end;
+  width:100%;
+
+}
+
+.footer-form {
+  display:flex;
+  justify-content: flex-end;
+  @include desktop {
+    width:100%;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+    .footer-links {
+      @include desktop {
+      display:flex;
+    }
+    }
+    .wrap {
+      @include desktop {
+        width:100%;
+        padding-right:50px;
+        padding-bottom:30px;
+      }
+    }
+    .info-wrapper {
+      @include desktop {
+        color:white;
+        text-transform: uppercase;
+        padding-left:40px;
+      }
+    }
+    .icon-wrapper{
+      @include desktop {
+        padding-top:10rem;
+        margin-left:60px;
+        // margin-bottom:30px;
+      }
+    }
+   .footer-links {
+     @include desktop {
+       color:white;
+       text-decoration: none;
+       line-height:3rem;
+     }
+   }
+   .form-wrapper {
+     @include desktop {
+       width:350px;
+     }
+   }
+  }
