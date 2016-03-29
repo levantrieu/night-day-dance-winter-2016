@@ -9,26 +9,26 @@
 function register_dance_type_taxonomy() {
 
 	$labels = array(
-		'name'                       => 'Instructors Type',
-		'singular_name'              => 'Instructor Type',
-		'menu_name'                  => 'Instructor Type',
-		'all_items'                  => 'All Instructor Types',
-		'parent_item'                => 'Parent Instructor',
-		'parent_item_colon'          => 'Parent Instructor:',
-		'new_item_name'              => 'New Instructor',
-		'add_new_item'               => 'Add Instructor',
-		'edit_item'                  => 'Edit Instructor',
-		'update_item'                => 'Update Instructor',
-		'view_item'                  => 'View Instructor',
+		'name'                       => 'Instructors City',
+		'singular_name'              => 'Instructor City',
+		'menu_name'                  => 'Instructor City',
+		'all_items'                  => 'All Instructor Cities',
+		'parent_item'                => 'Parent Instructor City',
+		'parent_item_colon'          => 'Parent Instructor City:',
+		'new_item_name'              => 'New Instructor City',
+		'add_new_item'               => 'Add Instructor City',
+		'edit_item'                  => 'Edit Instructor City',
+		'update_item'                => 'Update Instructor City',
+		'view_item'                  => 'View Instructor City',
 		'separate_items_with_commas' => 'Separate instructors with commas',
-		'add_or_remove_items'        => 'Add or remove instructors',
+		'add_or_remove_items'        => 'Add or remove instructor city',
 		'choose_from_most_used'      => 'Choose from the most used',
-		'popular_items'              => 'Popular Instructors',
-		'search_items'               => 'Search Instructors',
+		'popular_items'              => 'Popular Instructor Cities',
+		'search_items'               => 'Search Instructor Cities',
 		'not_found'                  => 'Not Found',
-		'no_terms'                   => 'No instructors',
-		'items_list'                 => 'Instructors list',
-		'items_list_navigation'      => 'Instructors list navigation',
+		'no_terms'                   => 'No instructor cities',
+		'items_list'                 => 'Instructor cities list',
+		'items_list_navigation'      => 'Instructor cities list navigation',
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -39,29 +39,29 @@ function register_dance_type_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'instructor-type', array( 'instructor' ), $args );
+	register_taxonomy( 'instructor-city', array( 'instructors' ), $args );
 
 	$labels = array(
-		'name'                       => 'Classes',
-		'singular_name'              => 'Class',
-		'menu_name'                  => 'Class',
-		'all_items'                  => 'All Classes',
-		'parent_item'                => 'Parent Classes',
-		'parent_item_colon'          => 'Parent Class:',
-		'new_item_name'              => 'New Class Name',
-		'add_new_item'               => 'Add New Class',
-		'edit_item'                  => 'Edit Class',
-		'update_item'                => 'Update Class',
-		'view_item'                  => 'View Class',
-		'separate_items_with_commas' => 'Separate classes with commas',
-		'add_or_remove_items'        => 'Add or remove classes',
+		'name'                       => 'Class Types',
+		'singular_name'              => 'Class Type',
+		'menu_name'                  => 'Class Type',
+		'all_items'                  => 'All Class Types',
+		'parent_item'                => 'Parent Class Type',
+		'parent_item_colon'          => 'Parent Class Type:',
+		'new_item_name'              => 'New Class Type Name',
+		'add_new_item'               => 'Add New Class Type',
+		'edit_item'                  => 'Edit Class Type',
+		'update_item'                => 'Update Class Type',
+		'view_item'                  => 'View Class Type',
+		'separate_items_with_commas' => 'Separate class types with commas',
+		'add_or_remove_items'        => 'Add or remove class types',
 		'choose_from_most_used'      => 'Choose from the most used',
-		'popular_items'              => 'Popular Classes',
-		'search_items'               => 'Search Classes',
+		'popular_items'              => 'Popular Class Types',
+		'search_items'               => 'Search Class Types',
 		'not_found'                  => 'Not Found',
-		'no_terms'                   => 'No classes',
-		'items_list'                 => 'Classes list',
-		'items_list_navigation'      => 'Classes list navigation',
+		'no_terms'                   => 'No class types',
+		'items_list'                 => 'Class types list',
+		'items_list_navigation'      => 'Class types list navigation',
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -72,7 +72,7 @@ function register_dance_type_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'class-type', array( 'class' ), $args );
+	register_taxonomy( 'class-type', array( 'classes' ), $args );
 
 }
 add_action( 'init', 'register_dance_type_taxonomy', 0 );
