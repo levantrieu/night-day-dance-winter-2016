@@ -1,3 +1,4 @@
+
 /*--------------------------------------------------------------
 # Navigation Mobile First
 --------------------------------------------------------------*
@@ -61,7 +62,7 @@
     top: 0; right: 0;
     transition: all 0.2s linear 0s;
     width: 100%;
-    z-index: 2;
+    z-index: 90;
 }
 
 // old media break
@@ -171,6 +172,7 @@ nav {
 	    background-color:#FFF;
       width: 0;
       @include desktop {
+      position:relative;
       transition:none;
 	    background-color:rgba(0,0,0, 0);
       right:0;
@@ -182,7 +184,7 @@ nav {
       border-left:20px solid #1A2776;
 	    overflow-y: scroll;
 	    width: 360px;
-	    z-index: 10;
+	    z-index: 100;
       @include desktop {
       display:none;
       }
@@ -198,6 +200,9 @@ nav {
 /*--------------------------------------------------------------
 /*          end custom drawer style mobile navigation          */
 /*--------------------------------------------------------------*/
+.sub-menu {
+  	background: #fff;
+}
 
 .ndd-logo img {
   	padding: 20px 0 0 20px;
@@ -272,6 +277,7 @@ a {
 		ul {
       box-shadow:none;
       position: absolute;
+      z-index: 99999;
 
         // left:-999;
         @include desktop {

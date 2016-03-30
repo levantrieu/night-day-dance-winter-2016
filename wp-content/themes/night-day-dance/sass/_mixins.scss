@@ -12,11 +12,7 @@
 }
 
 // Media queries
-@mixin tablet { //760px
-  @media all and (min-width: $tablet-width) {
-    @content; //meant for content 760px or wider
-  }
-}
+
 
 @mixin desktop {
   @media all and (min-width: $desktop-width) {
