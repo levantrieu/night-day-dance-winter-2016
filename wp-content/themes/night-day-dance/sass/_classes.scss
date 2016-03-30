@@ -1,0 +1,222 @@
+
+
+.header-feature-img {
+  display:flex;
+
+}
+
+.class-name {
+  color: #F6C11E;
+}
+
+.class-feature-img {
+    display:none;
+  @include desktop {
+    flex:0 1 33%;
+    display:inline-block;
+    overflow:hidden;
+  }
+}
+ .class-feature-img img {
+   flex-shrink: 0;
+   min-width: 100%;
+   min-height: 100%;
+}
+.class-page-title {
+  background-color:#ccc;
+  text-align:center;
+  width:100%;
+  margin:.5em auto .5em auto;
+  text-transform:uppercase;
+  padding: .5em 0;
+
+}
+.class-page-title h3 {
+  margin:0;
+  padding:0;
+}
+
+.class-header {
+  color: #FFF;
+  background-color: $color__brand-one;
+  padding:1em;
+  text-align: center;
+  @include desktop {
+    flex:1 0 67%;
+  }
+}
+
+.book-beatles-bring {
+  flex-direction: column;
+  display:flex;
+  @include desktop {
+  flex-direction:row;
+  }
+
+}
+.class-beatles span {
+  display:flex;
+  justify-content:flex-end;
+  padding-right: 96px;
+
+}
+
+.class-beatles .fa-quote-left::before {
+position: relative;
+top:.4em;
+}
+
+.class-beatles .fa-quote-right::before {
+position: relative;
+bottom: .6em;
+}
+
+.class-beatles p {
+  color:#FFF;
+  font-size:1.5em;
+}
+
+.class-beatles {
+  display:none;
+  @include desktop {
+    background-color:#F6C11E;
+    display:block;
+    padding:2em;
+    flex:0 1 35%;
+    margin-top:-7px;;
+  }
+}
+
+
+.book-now {
+  min-height: 290px;
+  background-color:#FF8578;
+  text-align: center;
+  margin-top: 10px;
+  flex-direction:column;
+  display:flex;
+  color:#FFF;
+  padding:1em;
+  @include desktop {
+      display:flex;
+      justify-content:center;
+      align-items: center;
+      margin-top:-7px;;
+      min-height:0;
+      flex:0 1 35%;
+      display:inline-block;
+      order:1;
+      }
+}
+
+.persian-wrapper {
+  display:flex;
+  padding:0;
+  margin:0;
+}
+
+.class-bring {
+  margin-top: 10px;
+  padding:1em;
+  text-align: center;
+  background-color:#F0EFEF;
+  color:#000;
+  @include desktop {
+    margin-top:-7px;;
+    flex:0 1 30%;
+  }
+}
+
+.class-bring ul, li {
+  list-style: none;
+  margin:0;
+  padding:0;
+  display:inline-block;
+}
+
+.class-bring p {
+  margin:0;
+}
+
+.class-price {
+  margin: 8px 0 -34px 0;
+  padding-top: 1em;
+}
+
+.class-length, .class-price, .class-bring {
+  font-size: 2em;
+}
+
+.book-now-btn {
+  margin: 0 auto;
+  width:150px;
+  text-align:center;
+  padding:8px 15px 8px 16px;
+  color:#FFF;
+  text-transform: uppercase;
+  background-color:#D12027;
+  @include desktop {
+    width:50%;
+    margin: 0 auto;
+  }
+}
+
+.class-quote p {
+  font-size:1.2em;
+  padding:  0 2.5em 0 2.5em;
+  margin:0;
+}
+.class-quote {
+  display:none;
+  @include desktop {
+    background-color:FFF;
+    margin: auto 15%;
+    color:#000;
+    padding:2em;
+    display:block;
+  }
+}
+
+.fa-quote-left:before { //f10d
+  color: rgba(174, 228, 251, 0.5);
+  content: "\f10d";
+  font-family: FontAwesome;
+  font-size: 106px;
+  position: relative;
+  top: 1em;
+}
+
+.fa-quote-right:before { //f10e
+  color: rgba(174, 228, 251, 0.5);
+  content: "\f10e";
+  font-family: FontAwesome;
+  font-size: 106px;
+  position: relative;
+  bottom: 1.2em;
+}
+.fa-quote-right {
+  float:right;
+}
+
+.class-double-dance {
+  color:#000;
+  min-height: 200px;
+  background-color: green;
+}
+
+.class-mega-wow {
+  min-height: 200px;
+  color: $color__brand-one;
+  background-color: #F6C11E;
+}
+
+.class-wedding-wow {
+  min-height: 200px;
+  color: #F6C11E;
+  background-color: $color__brand-one;
+}
+
+.class-wedding-wow, .class-mega-wow, .class-double-dance {
+  text-align:center;
+  padding-top: 1em;
+}

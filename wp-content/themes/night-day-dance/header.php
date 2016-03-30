@@ -26,20 +26,19 @@
 					<div class="site-branding">
 						<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<div class="ndd-logo">
-							<img src="<?php echo get_template_directory_uri() ?>/images/night-day-dance-logo.jpg"alt="Night and Day Dance Logo">
+							<a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/night-day-dance-logo.jpg"alt="Night and Day Dance Logo"></a>
 						</div>
 						</div><!-- .site-branding -->
 						<nav id="site-navigation" class="main-navigation" role="navigation">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?>
 							</button>
 							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-							<li class="nav-search">
+							<div class="nav-search">
 							<?php get_search_form(); ?>
-							</li>
+						</div>
 						</nav><!-- #site-navigation -->
-				</div>
-
 				</div> <!-- wraps logo and  menu -->
+
 
 				</header><!-- #masthead -->
 
