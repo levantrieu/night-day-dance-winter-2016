@@ -7,26 +7,24 @@
 
 get_header(); ?>
 
-text from single-instructors.php
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+	      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	      	<header class="entry-header">
+	          <?php the_title( '<h1 class="instructor-entry">', '</h1>' ); ?>
+	      		<?php if ( has_post_thumbnail() ) : ?>
+	      			<?php the_post_thumbnail( 'large' ); ?>
+	      		<?php endif; ?>
+					</header><!-- .entry-header -->
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
-
-			<?php the_post_navigation(); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
-		<?php endwhile; // End of the loop. ?>
-		<p class="contact-instructor"><?php echo CFS()->get( 'contact' ); ?></p>
+	      	<div class="instructor-info">
+	      		<?php the_content(); ?>
+						<button class="contact-instructor"><?php echo CFS()->get( 'contact' ); ?></button>
+	      	</div><!-- .entry-content -->
+				</article>
+			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

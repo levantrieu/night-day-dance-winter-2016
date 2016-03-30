@@ -242,6 +242,11 @@
 
 /* Instructor Archive */
 
+.site-main {
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
 .page-header {
   margin: 0 auto;
   background-color: $color__brand-six;
@@ -251,7 +256,13 @@
 }
 
 .instructor-location {
-  display: none;
+  font-family: 'Brandon', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $color__brand-one;
+  text-transform: uppercase;
+  border-bottom: 10px solid $color__brand-six;
+  margin: 0 0 0.5rem 0;
 
   @include desktop {
     font-family: 'Brandon', sans-serif;
@@ -267,13 +278,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  margin: 0 0 2.5rem 0;
 }
 
 .instructor-single {
   text-align: center;
   flex: 0 1 50%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 0 0 0.5rem 0;
 
   @include desktop {
     flex: 0 1 20%;
@@ -300,7 +313,59 @@
 
 .instructor-name {
   padding: 2rem;
+  max-width: 200px;
+  max-height: 250px;
+
+  img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+.instructor-name {
+  padding: 2rem 0.75rem;
   background-color: $color__brand-six;
   display: flex;
   justify-content: center;
+}
+
+/* Instructor Archive */
+
+.entry-header {
+  text-align: center;
+}
+
+.instructor-entry {
+  text-align: center;
+  background-color: $color__brand-six;
+  padding: 1rem 0;
+  margin: 0 -3rem;
+}
+
+.instructor-info {
+
+  button {
+    float: none;
+  }
+
+  .contact-instructor {
+    text-transform: uppercase;
+    background-color: $color__brand-one;
+    text-align: center;
+    width: 8rem;
+    padding: 0.75rem 1rem;
+
+    a, a:visited {
+      font-family: 'Brandon', sans-serif;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: $color__brand-three;
+    }
+
+  }
 }

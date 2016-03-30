@@ -1161,6 +1161,10 @@ object {
     height: 500px; } }
 
 /* Instructor Archive */
+.site-main {
+  margin: 0 auto;
+  padding: 0 3rem; }
+
 .page-header {
   margin: 0 auto;
   background-color: #f0efef;
@@ -1173,7 +1177,13 @@ object {
           justify-content: center; }
 
 .instructor-location {
-  display: none; }
+  font-family: 'Brandon', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #282f72;
+  text-transform: uppercase;
+  border-bottom: 10px solid #f0efef;
+  margin: 0 0 0.5rem 0; }
   @media all and (min-width: 1024px) {
     .instructor-location {
       font-family: 'Brandon', sans-serif;
@@ -1192,7 +1202,8 @@ object {
           flex-wrap: wrap;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
-          justify-content: flex-start; }
+          justify-content: flex-start;
+  margin: 0 0 2.5rem 0; }
 
 .instructor-single {
   text-align: center;
@@ -1202,9 +1213,10 @@ object {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 0.5rem 0; }
   @media all and (min-width: 1024px) {
     .instructor-single {
       -webkit-flex: 0 1 20%;
@@ -1226,6 +1238,15 @@ object {
 
 .instructor-name {
   padding: 2rem;
+  max-width: 200px;
+  max-height: 250px; }
+  .instructor-name img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover; }
+
+.instructor-name {
+  padding: 2rem 0.75rem;
   background-color: #f0efef;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1233,6 +1254,33 @@ object {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
+
+/* Instructor Archive */
+.entry-header {
+  text-align: center; }
+
+.instructor-entry {
+  text-align: center;
+  background-color: #f0efef;
+  padding: 1rem 0;
+  margin: 0 -3rem; }
+
+.instructor-info button {
+  float: none; }
+
+.instructor-info .contact-instructor {
+  text-transform: uppercase;
+  background-color: #282f72;
+  text-align: center;
+  width: 8rem;
+  padding: 0.75rem 1rem; }
+  .instructor-info .contact-instructor a, .instructor-info .contact-instructor a:visited {
+    font-family: 'Brandon', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff; }
+  .instructor-info .contact-instructor:hover {
+    background-color: #d12027; }
 
 .site-footer {
   width: 100%; }
