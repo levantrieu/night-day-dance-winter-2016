@@ -1235,12 +1235,7 @@ object {
   background-size: contain;
   overflow: hidden;
   height: 300px; }
-
-.instructor-name {
-  padding: 2rem;
-  max-width: 200px;
-  max-height: 250px; }
-  .instructor-name img {
+  .instructor-pic img {
     width: 200px;
     height: 250px;
     object-fit: cover; }
