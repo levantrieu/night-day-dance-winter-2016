@@ -1,0 +1,153 @@
+// .container {
+//   @include desktop {
+// width:1024px;
+// }
+// }
+.about-page{
+  display:none;
+  visibility: 0;
+  @include desktop {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    background-color:lightgray;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+}
+.helping {
+  background:  linear-gradient(to bottom, rgba(252, 252, 252,0.7) 0%, rgba(252, 252, 252,0.7) 100%),
+    url(../../images/people-dancing.png)no-repeat top;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height:300px;
+  p {
+    color:#1A2776;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  @include desktop {
+    height:500px;
+    margin-bottom: 80px;
+  }
+}
+.who-we-are {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:#1A2776;
+  height:70px;
+  font-size: 1.7rem;
+}
+.about-content {
+  display:flex;
+  justify-content: center;
+  background-color:#F6C11E;
+  color:#1A2776;
+  height:200px;
+  width:100%;
+  p {
+    width:80%;
+    font-size: 1.25rem;
+    @include desktop {
+      display:none;
+      visibility: 0;
+    }
+  }
+  @include desktop {
+    height:300px;
+    margin-bottom:80px;
+  }
+  .desktop-ac {
+    display:none;
+    visibility: 0;
+    @include desktop {
+      display:flex;
+      font-size: 1.5rem;
+      width:55%;
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+}
+.about-location {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:#1A2776;
+  height:70px;
+font-size: 1.7rem;
+}
+.location {
+  display:flex;
+  justify-content: center;
+  background-color:#85CEEE;
+  color:#1A2776;
+  height:200px;
+  width:100%;
+  p {
+    width:80%;
+    font-size: 1.25rem;
+    @include desktop {
+      display:none;
+      visibility: 0;
+    }
+  }
+  @include desktop {
+    height:300px;
+    margin-bottom: 60px;
+    .desktop-location {
+      display:flex;
+      font-size: 1.5rem;
+      width:55%;
+      text-align: center;
+      margin-top: 40px;
+
+    }
+  }
+}
+.desktop-location{
+  display: none;
+  visibility: 0;
+}
+.desktop-ac {
+  display: none;
+  visibility: 0;
+}
+.about-buttons {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  height:100px;
+  .about-book {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100px;
+    height:30px;
+    background-color: #1A2776;
+    color:#F6C11E;
+    @include desktop {
+      display:none;
+    }
+  }
+  .about-contact {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100px;
+    height:30px;
+    background-color: #1A2776;
+    color:#F6C11E;
+    @include desktop {
+      display:none;
+    }
+  }
+}

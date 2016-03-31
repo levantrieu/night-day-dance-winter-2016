@@ -173,6 +173,7 @@ nav {
       @include desktop {
       transition:none;
 	    background-color:rgba(0,0,0, 0);
+      position: relative;
       right:0;
       }
 	}
