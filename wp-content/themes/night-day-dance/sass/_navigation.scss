@@ -88,21 +88,21 @@ fieldset {
     padding:0px;
 }
 
-button, input[type="search"], input[type="submit"] {
-		position:relative;
-		border:none;
-		background-color:transparent;
-    outline:none;
-    float:right;
-    text-align: right;
-    font-weight: 700;
-}
-
-.fa-search {
-		margin:0;
-	  position:relative;
-    font-size: 1.2em;
-}
+// button, input[type="search"], input[type="submit"] {
+// 		position:relative;
+// 		border:none;
+// 		background-color:transparent;
+//     outline:none;
+//     float:right;
+//     text-align: right;
+//     font-weight: 700;
+// }
+//
+// .fa-search {
+// 		margin:0;
+// 	  position:relative;
+//     font-size: 1.2em;
+// }
 .nav-search .fa-search {
       font-size: 1.2em;
       @include desktop {

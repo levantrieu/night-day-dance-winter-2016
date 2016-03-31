@@ -1,0 +1,125 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+
+.ndd-search {
+	position: relative;
+	margin-right:1em;
+	border-radius: 50%;
+	margin-top: 10px;
+	width: 0%;
+	min-width: 40px;
+	height: 40px;
+	overflow: hidden;
+	-webkit-transition: width 0.3s;
+	-moz-transition: width 0.3s;
+	transition: width 0.3s;
+	-webkit-backface-visibility: hidden;
+	display:flex;
+	align-self:flex-end;
+			@include desktop {
+			align-self:flex-end;
+	}
+}
+
+.ndd-search-input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	outline: none;
+	background: #FFF;
+	width: 100%;
+	height: 40px;
+	margin: 0;
+	z-index: 10;
+	padding: 20px 65px 20px 20px;
+	font-family: inherit;
+	font-size: 20px;
+	color: #2c3e50;
+}
+
+.ndd-search-input::-webkit-input-placeholder {
+	border-bottom:1px solid #666;
+	color: #cccccc;
+}
+
+.ndd-search-input:-moz-placeholder {
+	border-bottom:1px solid #666;
+	color: #cccccc;
+}
+
+.ndd-search-input::-moz-placeholder {
+	color: #cccccc;
+}
+
+.ndd-search-input:-ms-input-placeholder {
+	color: #cccccc;
+}
+
+.ndd-icon-search,
+.ndd-search-submit  {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.ndd-search-submit {
+	background: #fff; /* IE needs this */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
+    filter: alpha(opacity=0); /* IE 5-7 */
+    opacity: 0;
+	color: transparent;
+	border: none;
+	outline: none;
+	z-index: -1;
+}
+
+.ndd-icon-search {
+	color: #fff;
+	background: #F6C11E;
+	z-index: 90;
+	font-size: 22px;
+	font-family: 'FontAwesome';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+/* Open state */
+.ndd-search.ndd-search-open,
+.no-js .ndd-search {
+	width: 100%;
+	@include desktop {
+		width: 40%;
+	}
+}
+
+.ndd-search.ndd-search-open .ndd-icon-search,
+.no-js .ndd-search .ndd-icon-search {
+	background: #FAE155;
+	color: #666;
+	z-index: 11;
+}
+
+.ndd-search.ndd-search-open .ndd-search-submit,
+.no-js .ndd-search .ndd-search-submit {
+	z-index: 90;
+}

@@ -1,0 +1,48 @@
+
+
+.desktop-border {
+  // display: inline-block;
+  position: relative;
+}
+
+.desktop-border:before {
+  display:none;
+  @include desktop {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    border: 15px solid white;
+    opacity:.5;
+  }
+}
+
+img {
+  vertical-align: middle; /* optional */
+}
+
+.desktop-image {
+    display:none;
+    @include desktop {
+     display:block;
+}
+}
+.category-image-loop {
+  position:relative;
+}
+
+.category-image-loop:before {
+    background: rgba(250,225,85,0.8);
+    overflow: hidden;
+    display: block;
+    content: '';
+    position: absolute;
+    height: 100%;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+}

@@ -9,8 +9,10 @@ get_header(); ?>
 
 <div id="primary" class="content-area classes site-container">
 	<main id="main" class="site-main" role="main">
+
 		<?php while ( have_posts() ) : the_post(); ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 <div class="class-page-title"><?php the_title( '<h3>', '</h3>' ); ?></div>
 			<div class="header-feature-img">
 					<header class="class-header">
@@ -48,7 +50,7 @@ get_header(); ?>
 			<section class="class-quote">
 				<i class="fa fa-quote-left"></i>
 				<p>I would, without hesitation, recommend Night and Day if you are thinking about dance lessons. David and Diane are excellent teachers and will make you feel comfortable and at ease right away. If they can teach me to dance, they can teach anybody!Let me repeat I would, without hesitation, recommend Night and Day if you are thinking about dance lessons. David and Diane are excellent teachers and will make you feel comfortable and at ease right away. If they can teach me to dance, they can teach anybody!</p>
-			<div><i class="fa fa-quote-right"></i>
+				<i class="fa fa-quote-right"></i>
 			</section>
 
 			<div class="class-double-dance">

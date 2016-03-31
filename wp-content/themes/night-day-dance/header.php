@@ -33,9 +33,18 @@
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?>
 							</button>
 							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-							<div class="nav-search">
-							<?php get_search_form(); ?>
-						</div>
+							<div id="ndd-search" class="ndd-search">
+								<form>
+									<input class="ndd-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+									<input class="ndd-search-submit" type="submit" value="">
+									<span class="ndd-icon-search"><i class="fa fa-search"></i></span>
+								</form>
+							</div>
+							<script src="/wp-content/themes/night-day-dance/js/classie.js"></script>
+							<script src="/wp-content/themes/night-day-dance/js/uisearch.js"></script>
+				<script>
+					new UISearch( document.getElementById( 'ndd-search' ) );
+				</script>
 						</nav><!-- #site-navigation -->
 				</div> <!-- wraps logo and  menu -->
 

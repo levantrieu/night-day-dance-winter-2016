@@ -2,7 +2,6 @@
 
 .header-feature-img {
   display:flex;
-
 }
 
 .class-name {
@@ -17,11 +16,13 @@
     overflow:hidden;
   }
 }
+
  .class-feature-img img {
    flex-shrink: 0;
    min-width: 100%;
    min-height: 100%;
 }
+
 .class-page-title {
   background-color:#ccc;
   text-align:center;
@@ -29,8 +30,8 @@
   margin:.5em auto .5em auto;
   text-transform:uppercase;
   padding: .5em 0;
-
 }
+
 .class-page-title h3 {
   margin:0;
   padding:0;
@@ -52,33 +53,36 @@
   @include desktop {
   flex-direction:row;
   }
-
 }
+
 .class-beatles span {
-  display:flex;
-  justify-content:flex-end;
-  padding-right: 96px;
+  position:absolute;
+  bottom: 3.5em;
+  left: 60%;
 
 }
 
 .class-beatles .fa-quote-left::before {
-position: relative;
-top:.4em;
+  position: absolute;
+  top: .75em;
+  font-size: 60px;
+
+  z-index:0;
 }
 
 .class-beatles .fa-quote-right::before {
-position: relative;
-bottom: .6em;
-}
+  position: absolute;
+  font-size: 60px;
+  bottom: 1em;
+  left: 80%;
+  z-index: 0;
 
-.class-beatles p {
-  color:#FFF;
-  font-size:1.5em;
 }
 
 .class-beatles {
   display:none;
   @include desktop {
+    position:relative;
     background-color:#F6C11E;
     display:block;
     padding:2em;
@@ -87,6 +91,10 @@ bottom: .6em;
   }
 }
 
+.class-beatles p {
+  color:#FFF;
+  font-size:1.5em;
+}
 
 .book-now {
   min-height: 290px;
@@ -163,12 +171,13 @@ bottom: .6em;
 
 .class-quote p {
   font-size:1.2em;
-  padding:  0 2.5em 0 2.5em;
+  padding:  5em 2.5em;
   margin:0;
 }
 .class-quote {
   display:none;
   @include desktop {
+    position:relative;
     background-color:FFF;
     margin: auto 15%;
     color:#000;
@@ -178,24 +187,25 @@ bottom: .6em;
 }
 
 .fa-quote-left:before { //f10d
+  position:absolute;
   color: rgba(174, 228, 251, 0.5);
   content: "\f10d";
   font-family: FontAwesome;
   font-size: 106px;
-  position: relative;
   top: 1em;
+  left: .25em;
+  z-index:-2;
 }
 
 .fa-quote-right:before { //f10e
+  position:absolute;
   color: rgba(174, 228, 251, 0.5);
   content: "\f10e";
   font-family: FontAwesome;
   font-size: 106px;
-  position: relative;
   bottom: 1.2em;
-}
-.fa-quote-right {
-  float:right;
+  left:80%;
+  z-index:-2;
 }
 
 .class-double-dance {
