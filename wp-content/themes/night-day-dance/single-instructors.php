@@ -12,18 +12,29 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 	      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	      	<header class="entry-header">
-	          <?php the_title( '<h1 class="instructor-entry">', '</h1>' ); ?>
-	      		<?php if ( has_post_thumbnail() ) : ?>
-	      			<?php the_post_thumbnail( 'large' ); ?>
-	      		<?php endif; ?>
-					</header><!-- .entry-header -->
-
-	      	<div class="instructor-info">
-	      		<?php the_content(); ?>
-						<button class="contact-instructor"><?php echo CFS()->get( 'contact' ); ?></button>
-	      	</div><!-- .entry-content -->
+					<div class="entry-header instructor-single-name-top">
+						<?php the_title( '<h1 class="instructor-entry">', '</h1>' ); ?>
+					</div>
+					<?php if ( has_post_thumbnail() ) : ?>
+						<div class="instructor-single-pic"><?php the_post_thumbnail( 'large' ); ?></div>
+					<?php endif; ?>
+					<div class="instructor-name-bio">
+						<div class="entry-header instructor-single-name">
+							<?php the_title( '<h1 class="instructor-entry">', '</h1>' ); ?>
+						</div>
+	      		<div class="instructor-info">
+	      			<?php the_content(); ?>
+							<div class="contact">
+								<button class="contact-instructor"><?php echo CFS()->get( 'contact' ); ?></button>
+							</div>
+	      		</div>
+					</div>
 				</article>
+				<div class="instructor-extra">
+					<div class="lifestyle-pic"><img src="<?php echo CFS()->get( 'lifestyle_image' ); ?>"></div>
+					<div class="dance-pic"><img src="<?php echo CFS()->get( 'dance_image' ); ?>"></div>
+					<div class="instructor-quote"><div><?php echo CFS()->get( 'instructor_quote' ); ?></div></div>
+				</div>
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->

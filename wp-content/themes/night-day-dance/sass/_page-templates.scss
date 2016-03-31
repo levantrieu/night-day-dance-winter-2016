@@ -253,6 +253,12 @@
   padding: 2rem;
   display: flex;
   justify-content: center;
+  margin: 0 0 2rem 0;
+
+  @include desktop {
+    background-color: #fff;
+    margin: 0 0 0 0;
+  }
 }
 
 .instructor-location {
@@ -308,7 +314,8 @@
 .instructor-pic {
   background-size: contain;
   overflow: hidden;
-  height: 300px;
+  max-width: 200px;
+  max-height: 250px;
 
   img {
     width: 200px;
@@ -324,7 +331,7 @@
   justify-content: center;
 }
 
-/* Instructor Archive */
+/* Instructor Single Page */
 
 .entry-header {
   text-align: center;
@@ -335,6 +342,70 @@
   background-color: $color__brand-six;
   padding: 1rem 0;
   margin: 0 -3rem;
+
+  @include desktop {
+    font-size: 1.5rem;
+    text-align: left;
+    background-color: #fff;
+    margin: -1.5rem 0;
+  }
+}
+
+.instructor-name-bio {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+  margin: 0 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  }
+}
+
+.instructor-single-name {
+  display: none;
+
+  @include desktop {
+  display: block;
+  width: 100%;
+  margin: 0 0 0.6rem;
+  }
+}
+
+.instructor-single-name-top {
+  @include desktop {
+    display: none;
+  }
+}
+
+.instructor-single-pic {
+  text-align: center;
+
+  img {
+    max-width: 250px;
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+
+  @include desktop {
+    justify-content: flex-end;
+  }
+}
+
+.type-instructors {
+  display: block;
+  margin: 0 0 4rem 0;
+
+  @include desktop {
+  display: flex;
+  justify-content: flex-start;
+  margin: 2rem 0;
+  }
 }
 
 .instructor-info {
@@ -360,6 +431,59 @@
     &:hover {
       background-color: $color__brand-three;
     }
+  }
+}
 
+.instructor-extra {
+  display: none;
+
+  @include desktop {
+  overflow: hidden;
+  margin: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  }
+}
+
+.lifestyle-pic {
+  flex: 2 0 40%;
+  background-size: contain;
+  overflow: hidden;
+  max-width: 450px;
+  max-height: 250px;
+
+  img {
+    width: 450px;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+.dance-pic {
+  flex: 1 0 30%;
+  background-size: contain;
+  overflow: hidden;
+  max-width: 450px;
+  max-height: 250px;
+
+  img {
+    width: 450px;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+.instructor-quote {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  background-color: $color__brand-four;
+  padding: 1rem;
+  flex: 0 1 30%;
+  display: flex;
+
+  div {
+    align-self: center;
   }
 }
