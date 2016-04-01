@@ -47,8 +47,8 @@
 				</script>
 						</nav><!-- #site-navigation -->
 				</div> <!-- wraps logo and  menu -->
-
-
 				</header><!-- #masthead -->
+
+				<?php custom_breadcrumbs(); ?>
 
 				<div id="content" class="site-content">

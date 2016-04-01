@@ -8,14 +8,13 @@
 get_header(); ?>
 
 <div id="primary" class="content-area">
+	<header class="page-header">
+		<?php
+		the_archive_title( '<h1 class="page-title">', '</h1>' );
+		the_archive_description( '<div class="taxonomy-description">', '</div>' );
+		?>
+	</header>
 	<main id="main" class="site-main" role="main">
-
-		<header class="page-header">
-			<?php
-			the_archive_title( '<h1 class="page-title">', '</h1>' );
-			the_archive_description( '<div class="taxonomy-description">', '</div>' );
-			?>
-		</header>
 
 		<!-- Loop through Categories and Display Posts within -->
 		<?php $post_type = 'instructors'; ?>

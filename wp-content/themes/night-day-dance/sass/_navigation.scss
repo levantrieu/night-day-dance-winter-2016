@@ -7,85 +7,85 @@
 
 .responsive-nav-icon::before,
 .responsive-nav-close::before {
-    cursor: pointer;
-    color: #000;
-    content: "\f0c9";
-    font-family: FontAwesome;
-    font-size: 36px;
-    position: relative;
-		flex: 0 0 20%;
-		display:flex;
-		align-self:center;
+  cursor: pointer;
+  color: #000;
+  content: "\f0c9";
+  font-family: FontAwesome;
+  font-size: 36px;
+  position: relative;
+  flex: 0 0 20%;
+  display:flex;
+  align-self:center;
 
 }
 
 .responsive-nav-close::before {
-    font-family: FontAwesome;
-    color: #888888;
-    content: "\f00d";
-    font-size: 24px;
+  font-family: FontAwesome;
+  color: #888888;
+  content: "\f00d";
+  font-size: 24px;
 }
 
 .responsive-nav-icon {
-  	background: #fff;
-  	line-height: normal;
-  	padding: 5px 8px 4px;
-  	top: 25px; right: 25px;
+  background: #fff;
+  line-height: normal;
+  padding: 5px 8px 4px;
+  top: 25px; right: 25px;
 }
 
 .responsive-nav-icon:hover,
 .responsive-nav-close:hover {
-	  opacity: .7;
+  opacity: .7;
 
 }
 
 .responsive-nav-close {
-	  top: 30px; right: 30px;
+  top: 30px; right: 30px;
 }
 
 .responsive-nav-icon,
 .responsive-nav-close {
-    cursor: pointer;
-    display: none;
-    @include desktop {
-      display: block;
-      position: absolute;
-      z-index: 1;
+  cursor: pointer;
+  display: none;
+  @include desktop {
+    display: block;
+    position: absolute;
+    z-index: 1;
   }
 }
 
 #overlay {
-    background: 0 0 rgba(0, 0, 0, 0.8);
-    display: none;
-    height: 100%;
-    position: fixed;
-    top: 0; right: 0;
-    transition: all 0.2s linear 0s;
-    width: 100%;
-    z-index: 90;
+  background: 0 0 rgba(0, 0, 0, 0.8);
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 0; right: 0;
+  transition: all 0.2s linear 0s;
+  width: 100%;
+  z-index: 90;
 }
 
 // old media break
 
 .menu {
-    padding-top:50px;
-    @include desktop {
-      padding-top:0px;
-    }
+  padding-top:50px;
+  @include desktop {
+    padding-top:0px;
+  }
 }
 
 .main-navigation li {
-      text-align:right;
-      display:inline-block;
-      @include desktop {
-      align-self:flex-end;
-      }
+  text-align:right;
+  display:inline-block;
+  @include desktop {
+    align-self:flex-end;
+  }
 }
 
 fieldset {
-    border: none;
-    margin:0px;
-    padding:0px;
+  border: none;
+  margin:0px;
+  padding:0px;
 }
 
 // button, input[type="search"], input[type="submit"] {
@@ -104,146 +104,146 @@ fieldset {
 //     font-size: 1.2em;
 // }
 .nav-search .fa-search {
-      font-size: 1.2em;
-      @include desktop {
-      align-self:flex-end;
-      }
+  font-size: 1.2em;
+  @include desktop {
+    align-self:flex-end;
+  }
 }
 
 nav {
 
-    flex: 1 0 66%;
-    display:flex;
-    align-self:flex-end;
+  flex: 1 0 66%;
+  display:flex;
+  align-self:flex-end;
 }
 
 .menu-item-has-children > a:before {
-    font-family: FontAwesome;
-    color: #888;
-    content: "\f078";
-    position:relative;
-    right:2px;
-    @include desktop {
+  font-family: FontAwesome;
+  color: #888;
+  content: "\f078";
+  position:relative;
+  right:2px;
+  @include desktop {
     left:2px;
     content: '';
   }
 }
 
-  .menu-item-has-children > a:after {
-      @include desktop {
-      font-family: FontAwesome;
-      color: #888;
-      content: "\f078";
-      position:relative;
-      left:3px;
+.menu-item-has-children > a:after {
+  @include desktop {
+    font-family: FontAwesome;
+    color: #888;
+    content: "\f078";
+    position:relative;
+    left:3px;
   }
 }
 
- nav li {
-      border-bottom: 1px solid #CCC;
-      @include desktop {
-        display:flex;
-        align-self:flex-end;
-        border:0;
-    }
+nav li {
+  border-bottom: 1px solid #CCC;
+  @include desktop {
+    display:flex;
+    align-self:flex-end;
+    border:0;
   }
+}
 
 .responsive-nav-icon,
 .responsive-nav-close {
-      display: block;
-      position: absolute;
-      z-index: 1;
-      @include desktop {
-      display:none;
-	}
+  display: block;
+  position: absolute;
+  z-index: 1;
+  @include desktop {
+    display:none;
+  }
 }
 
-  .menu-mainmenu-container {
-      width:100%;
+.menu-mainmenu-container {
+  width:100%;
+}
+
+nav {
+  flex-direction:column;
+  height: 100%;
+  padding: 20px;
+  position: fixed;
+  top: 0; right: -2000px;
+  transition: all 0.4s linear 0s;
+  background-color:#FFF;
+  width: 0;
+  @include desktop {
+    position:relative;
+    transition:none;
+    background-color:rgba(0,0,0, 0);
+    position: relative;
+    right:0;
   }
+}
 
-	nav {
-      flex-direction:column;
-	    height: 100%;
-	    padding: 20px;
-	    position: fixed;
-	    top: 0; right: -2000px;
-	    transition: all 0.4s linear 0s;
-	    background-color:#FFF;
-      width: 0;
-      @include desktop {
-      position:relative;
-      transition:none;
-	    background-color:rgba(0,0,0, 0);
-      position: relative;
-      right:0;
-      }
-	}
+nav.slide-in {
+  right: 0;
+  border-left:20px solid #1A2776;
+  overflow-y: scroll;
+  width: 360px;
+  z-index: 100;
+  @include desktop {
+    display:none;
+  }
+}
 
-	nav.slide-in {
-	    right: 0;
-      border-left:20px solid #1A2776;
-	    overflow-y: scroll;
-	    width: 360px;
-	    z-index: 100;
-      @include desktop {
-      display:none;
-      }
-	}
-
-	nav .menu-item {
-		display: block;
-    @include desktop {
+nav .menu-item {
+  display: block;
+  @include desktop {
     display:inline-block;
-    }
+  }
 }
 
 /*--------------------------------------------------------------
 /*          end custom drawer style mobile navigation          */
 /*--------------------------------------------------------------*/
 .sub-menu {
-  	background: #fff;
+  background: #fff;
 }
 
 .ndd-logo img {
-  	padding: 20px 0 0 20px;
-  	width:90%;
-  	min-width:160px;
+  padding: 20px 0 0 20px;
+  width:90%;
+  min-width:160px;
 }
 
 .logo-menu-wrapper {
-		@include desktop {
-      justify-content:space-between;
-  		display:flex;
-    }
+  @include desktop {
+    justify-content:space-between;
+    display:flex;
+  }
 }
 
 .site-branding  {
-      display:flex;
-  	  flex: 0 1 33%;
+  display:flex;
+  flex: 0 1 33%;
 }
 
 
 /* Links */
 
 a {
-	color: $color__link;
+  color: $color__link;
 
-	&:visited {
-		color: $color__link-visited;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+  &:visited {
+    color: $color__link-visited;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color__link-hover;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
 }
 
 /* Menus */
@@ -266,95 +266,95 @@ a {
     flex-direction: column-reverse;
     justify-content: flex-end;
     padding-top: 8%;
-    }
+  }
 
 
-	ul {
+  ul {
     font-weight: 700;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
 
-		ul {
+    ul {
       box-shadow:none;
       position: absolute;
       z-index: 99999;
 
-        // left:-999;
-        @include desktop {
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-          top: $base__space-unit;
-          position: absolute;
-          left: -999em;
-          z-index: 99999;
-          display:block;
-      }
-
-			ul {
-          display:block;
-				// left: -999em;
-        right:2.5em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-        @include desktop {
-        text-align: left;
-        margin-left: 10px;
-        }
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
+      // left:-999;
       @include desktop {
-      margin-top: -15px;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+        top: $base__space-unit;
+        position: absolute;
+        left: -999em;
+        z-index: 99999;
+        display:block;
       }
-		}
-	}
 
-	li {
-		position: relative;
+      ul {
+        display:block;
+        // left: -999em;
+        right:2.5em;
+        top: 0;
+      }
+
+      li {
+        &:hover > ul,
+        &.focus > ul {
+          left: 100%;
+        }
+      }
+
+      a {
+        width: 200px;
+        @include desktop {
+          text-align: left;
+          margin-left: 10px;
+        }
+      }
+
+      :hover > a,
+      .focus > a {
+      }
+
+      a:hover,
+      a.focus {
+      }
+    }
+
+    li:hover > ul,
+    li.focus > ul {
+      left: auto;
+      @include desktop {
+        margin-top: -15px;
+      }
+    }
+  }
+
+  li {
+    position: relative;
     text-transform: uppercase;
     @include desktop {
       padding-right: 15px;
     }
 
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-	a {
-		display: block;
-		text-decoration: none;
+    &:hover > a,
+    &.focus > a {
+    }
+  }
+  a {
+    display: block;
+    text-decoration: none;
     font-size: .75em;
-	}
+  }
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
-	}
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_ancestor > a {
+  }
 }
 
 .current_page_item a, .current-menu-item a {
-    box-shadow:inset 0px -3px 0px 0px #F6C11E;
+  box-shadow:inset 0px -3px 0px 0px #F6C11E;
 }
 
 /* Small menu. */
@@ -368,23 +368,79 @@ a {
 .posts-navigation,
 .post-navigation {
 
-	.site-main & {
-		margin: 0 0 $base__space-unit;
-		overflow: hidden;
-	}
+  .site-main & {
+    margin: 0 0 $base__space-unit;
+    overflow: hidden;
+  }
 
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
+  .nav-previous {
+    float: left;
+    width: 50%;
+  }
 
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
+  .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+  }
 }
 
 .menu-toggle {
   display: none;
+}
+
+/**
+* Breadcrumbs
+*/
+
+.breadcrumbs {
+  text-align: center;
+  background-color: $color__brand-six;
+  padding: 0.5rem;
+  margin: 2rem 0 0;
+
+  @include desktop {
+    margin: 0 0 2rem;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  .bread-current {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 1.25rem;
+    color: #5D5D5D;
+    text-transform: uppercase;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    @include desktop {
+      font-size: 1rem;
+    }
+  }
+
+  .item-cat {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0;
+
+    a, a:visited {
+      color: #5D5D5D;
+      text-decoration: none;
+    }
+
+    @include desktop {
+      font-size: 1rem;
+    }
+  }
+
+  .separator {
+    font-size: 1.5rem;
+    color: #CFCFCF;
+    margin: 0 0.5rem;
+  }
 }

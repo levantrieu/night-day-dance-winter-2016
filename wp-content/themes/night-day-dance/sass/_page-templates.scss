@@ -269,14 +269,20 @@
 .page-header {
   margin: 0 auto;
   background-color: $color__brand-six;
-  padding: 2rem;
+  padding: 0.25rem 0 1rem;
   display: flex;
   justify-content: center;
   margin: 0 0 2rem 0;
 
   @include desktop {
     background-color: #fff;
-    margin: 0 0 0 0;
+    padding: 0;
+    margin: 0 0 2rem 0;
+  }
+
+  .page-title {
+    align-self: center;
+    margin: 0;
   }
 }
 
@@ -399,8 +405,31 @@
   }
 }
 
+.instructor-pic-frame {
+
+  @include desktop {
+  display: flex;
+  justify-content: center;
+  height: 350px;
+  width: 300px;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      $color__brand-one,
+      $color__brand-one 2px,
+      #fff 2px,
+      #fff 20px,
+      $color__brand-one 20px,
+      $color__brand-one 22px,
+      #fff 22px,
+      #fff 26px
+    );
+  }
+}
+
 .instructor-single-pic {
   text-align: center;
+  align-self: center;
 
   img {
     max-width: 250px;
@@ -428,6 +457,11 @@
 }
 
 .instructor-info {
+  margin: 2rem 0 0;
+
+  @include desktop {
+    margin: 0;
+  }
 
   button {
     float: none;
@@ -438,6 +472,7 @@
     background-color: $color__brand-one;
     text-align: center;
     width: 8rem;
+    border: none;
     padding: 0.75rem 1rem;
 
     a, a:visited {
