@@ -2072,6 +2072,7 @@ object {
   text-align: center;
   padding-top: 1em; }
 
+
 .site-main {
   padding: 0; }
 
@@ -2215,9 +2216,32 @@ img {
       font-size: 1rem;
       margin-bottom: 25px; } }
 
+@media all and (min-width: 1024px) {
+  .about-p-wrapper {
+    background: rgba(252, 252, 252, 0.7);
+    background-size: cover;
+    position: relative;
+    top: 30px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    line-height: 0;
+    height: 300px;
+    width: 500px; }
+    .about-p-wrapper .second-line {
+      margin-bottom: 250px; } }
+
+
 .helping {
-  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.7) 0%, rgba(252, 252, 252, 0.7) 100%), url(../../images/people-dancing.png) no-repeat top;
-  background-size: cover;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -2230,16 +2254,32 @@ img {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
-  height: 300px; }
+  text-align: center; }
   .helping p {
     color: #1A2776;
+
     font-size: 2rem;
     text-transform: uppercase; }
+
+
+    @media all and (min-width: 1024px) {
+      .helping p {
+        color: #1A2776;
+        font-size: 2rem;
+        text-transform: uppercase;
+        position: relative;
+        top: 100px; } }
+
   @media all and (min-width: 1024px) {
     .helping {
       height: 500px;
-      margin-bottom: 80px; } }
+      margin-bottom: 80px; }
+      .helping .about-image {
+        width: 90%;
+        height: 70%;
+        background: linear-gradient(to bottom, rgba(252, 252, 252, 0.7) 0%, rgba(252, 252, 252, 0.7) 100%);
+        background-size: cover;
+        position: absolute; } }
 
 .who-we-are {
   display: -webkit-flex;
@@ -2253,6 +2293,7 @@ img {
           align-items: center;
   color: #1A2776;
   height: 70px;
+  width: 100%;
   font-size: 1.7rem; }
 
 .about-content {
@@ -2263,16 +2304,43 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #F6C11E;
-  color: #1A2776;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #85CEEE;
   height: 200px;
   width: 100%; }
   .about-content p {
     width: 80%;
+
     font-size: 1.25rem; }
+
+
+
     @media all and (min-width: 1024px) {
       .about-content p {
         display: none;
         visibility: 0; } }
+
+
+  .about-content .ab-desktop {
+    display: none;
+    visibility: 0; }
+    @media all and (min-width: 1024px) {
+      .about-content .ab-desktop {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        width: 200px;
+        height: 30px;
+        background-color: white; } }
+
   @media all and (min-width: 1024px) {
     .about-content {
       height: 300px;
@@ -2311,6 +2379,12 @@ img {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #85CEEE;
   color: #1A2776;
   height: 200px;
@@ -2318,6 +2392,7 @@ img {
   .location p {
     width: 80%;
     font-size: 1.25rem; }
+
     @media all and (min-width: 1024px) {
       .location p {
         display: none;
@@ -2334,6 +2409,20 @@ img {
         width: 55%;
         text-align: center;
         margin-top: 40px; } }
+  .location .ac-desktop {
+    display: none;
+    visibility: 0; }
+    @media all and (min-width: 1024px) {
+      .location .ac-desktop {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        width: 200px;
+        height: 30px;
+        background-color: white; } }
 
 .desktop-location {
   display: none;
@@ -2388,3 +2477,75 @@ img {
     @media all and (min-width: 1024px) {
       .about-buttons .about-contact {
         display: none; } }
+
+
+.error-404 {
+  width: 100%;
+  margin-top: 50px; }
+  @media all and (min-width: 1024px) {
+    .error-404 {
+      width: 100%;
+      height: 500px; } }
+
+.content-404 {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url(../../images/404.png) no-repeat top;
+  background-size: cover;
+  height: 300px;
+  margin-bottom: 100px;
+  text-align: center; }
+  .content-404 p {
+    width: 80%;
+    color: #1A2776;
+    font-size: 1.2rem; }
+  @media all and (min-width: 1024px) {
+    .content-404 {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      background: url(../../images/404.png) no-repeat top;
+      background-size: cover;
+      width: 100%;
+      height: 400px;
+      margin-bottom: 100px; }
+      .content-404 p {
+        font-size: 2rem;
+        color: #1A2776; }
+      .content-404 h1 {
+        font-size: 3rem; } }
+
+html {
+  font-size: 16px; }
+
+h1 {
+  font-family: 'Roboto Slab';
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #282f72; }
+
+ul {
+  list-style: circle; }
+  ul li {
+    font-family: 'Brandon';
+    font-size: 1.5rem;
+    margin: 0.5rem 0; }
