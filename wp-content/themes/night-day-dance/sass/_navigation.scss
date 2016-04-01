@@ -88,21 +88,6 @@ fieldset {
   padding:0px;
 }
 
-// button, input[type="search"], input[type="submit"] {
-// 		position:relative;
-// 		border:none;
-// 		background-color:transparent;
-//     outline:none;
-//     float:right;
-//     text-align: right;
-//     font-weight: 700;
-// }
-//
-// .fa-search {
-// 		margin:0;
-// 	  position:relative;
-//     font-size: 1.2em;
-// }
 .nav-search .fa-search {
   font-size: 1.2em;
   @include desktop {
@@ -162,34 +147,35 @@ nav li {
   width:100%;
 }
 
-nav {
-  flex-direction:column;
-  height: 100%;
-  padding: 20px;
-  position: fixed;
-  top: 0; right: -2000px;
-  transition: all 0.4s linear 0s;
-  background-color:#FFF;
-  width: 0;
-  @include desktop {
-    position:relative;
-    transition:none;
-    background-color:rgba(0,0,0, 0);
-    position: relative;
-    right:0;
-  }
-}
+	nav {
+      flex-direction:column;
+	    height: 100%;
+	    padding: 20px;
+	    position: fixed;
+	    top: 0; right: -2000px;
+	    transition: all 0.4s linear 0s;
+	    background-color:#FFF;
+      width: 0;
+      @include desktop {
+        padding: 1px;
+      position:relative;
+      transition:none;
+	    background-color:rgba(0,0,0, 0);
+      position: relative;
+      right:0;
+      }
+	}
 
-nav.slide-in {
-  right: 0;
-  border-left:20px solid #1A2776;
-  overflow-y: scroll;
-  width: 360px;
-  z-index: 100;
-  @include desktop {
-    display:none;
-  }
-}
+	nav.slide-in {
+	    right: 0;
+      border-left:20px solid #1A2776;
+	    overflow-y: scroll;
+	    width: 360px;
+	    z-index: 100;
+      @include desktop {
+      display:none;
+      }
+	}
 
 nav .menu-item {
   display: block;
@@ -248,8 +234,6 @@ a {
 
 /* Menus */
 
-
-
 .menu-item-8 {
   padding-top: 105px;
   @include desktop {
@@ -274,20 +258,33 @@ a {
     list-style: none;
     margin: 0;
     padding-left: 0;
+    }
+
+	ul {
+    text-align-last: right;
+    font-weight: 700;
+		list-style: none;
+		margin: 0;
+		padding-left: 70px;
+    @include desktop {
+      padding-left: 1px;
+
+
+    }
 
     ul {
       box-shadow:none;
       position: absolute;
       z-index: 99999;
-
-      // left:-999;
-      @include desktop {
-        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-        top: $base__space-unit;
-        position: absolute;
-        left: -999em;
-        z-index: 99999;
-        display:block;
+        // left:-999;
+        @include desktop {
+            text-align-last: left;
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          top: $base__space-unit;
+          position: absolute;
+          left: -999em;
+          z-index: 99999;
+          display:block;
       }
 
       ul {
@@ -297,15 +294,17 @@ a {
         top: 0;
       }
 
-      li {
-        &:hover > ul,
-        &.focus > ul {
-          left: 100%;
-        }
-      }
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
 
-      a {
-        width: 200px;
+			a {
+				width: 100px;
+        text-align: center;
+        margin-left: 10px;
         @include desktop {
           text-align: left;
           margin-left: 10px;
@@ -347,18 +346,14 @@ a {
     font-size: .75em;
   }
 
-  .current_page_item > a,
-  .current-menu-item > a,
-  .current_page_ancestor > a {
-  }
-}
-
-.current_page_item a, .current-menu-item a {
-  box-shadow:inset 0px -3px 0px 0px #F6C11E;
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a {
+    border-bottom:3px solid #F6C11E;
+	}
 }
 
 /* Small menu. */
-
 
 .menu-toggle,
 .main-navigation.toggled ul {

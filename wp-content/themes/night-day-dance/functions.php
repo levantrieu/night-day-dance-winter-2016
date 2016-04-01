@@ -21,11 +21,16 @@ if ( ! function_exists( 'red_starter_setup' ) ) :
 		// Enable support for Post Thumbnails on posts and pages.
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'primary' => esc_html( 'Primary Menu' ),
+	// Register Navigation Menus
+	function ndd_navigation_menus() {
+		$locations = array(
+			'primary-menu' => __( 'main menu' ),
+			'footer-menu' => __( 'footer menu' ),
+		);
+		register_nav_menus( $locations );
+	}
 
-			) );
+	add_action( 'init', 'ndd_navigation_menus' );
 
 			// Switch search form, comment form, and comments to output valid HTML5.
 			add_theme_support( 'html5', array(

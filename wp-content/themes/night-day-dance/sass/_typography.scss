@@ -13,6 +13,17 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+html {
+	font-size: 16px;
+}
+
+h1 {
+	font-family: 'Roboto Slab';
+	font-size: 2rem;
+	text-transform: uppercase;
+	color: $color__brand-one;
+}
+
 /* Headings */
 h2 {
 	font-size: 2em;

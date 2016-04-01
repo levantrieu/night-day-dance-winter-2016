@@ -13,7 +13,6 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<div class="class-page-title"><?php the_title( '<h3>', '</h3>' ); ?></div>
 			<div class="header-feature-img">
 					<header class="class-header">
 						<?php the_title( '<h1 class="class-name">', '</h1>' ); ?>

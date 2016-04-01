@@ -34,10 +34,11 @@
 <div class="icons"><i class="fa fa-instagram fa-lg"></i></div>
 </div>
 <div class="info-wrapper">
-<a class="footer-links" href="<?php echo esc_url( home_url() ); ?>/About/">About</a>
-<a class="footer-links" href="<?php echo esc_url( home_url() ); ?>/About/">contact</a>
-<a class="footer-links" href="<?php echo esc_url( home_url() ); ?>/About/">Outreach Programs</a>
-<a class="footer-links" href="<?php echo esc_url( home_url() ); ?>/About/">FAQ</a>
+  <?php wp_nav_menu( array(
+      'sort_column' => 'menu_order',
+      'theme_location' => 'footer-menu',
+      'menu_class' => 'css-footer-menu',
+  ) ); ?>
 </div>
 </div>
 

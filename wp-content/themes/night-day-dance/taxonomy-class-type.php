@@ -7,40 +7,48 @@
 
 get_header(); ?>
 
-text from taxonomy-class-type.php
-
 <div id="primary" class="content-area site-container class-type">
 	<main id="main" class="site-main" role="main">
+		<article>
+			<div class="desktop-border">
+				<img src="<?php echo get_template_directory_uri() ?>/images/couple-legs.jpg" alt="Legs Dance Class" height="100%" width="100%">
+				<h2 class="child-title">it takes two to tango</h2>
+			</div>
+			<section class="top-text-block">
+			a dance routine just as unique as your love.
+			</section>
+			<section>
+				<div class="package-loop-wrapper">
+					<?php if ( have_posts() ) : ?>
 
-		<?php if ( have_posts() ) : ?>
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<div>
-					<div>
-						<?php if ( has_post_thumbnail() ) : ?>
-							<?php the_post_thumbnail( 'large' ); ?>
-						<?php endif; ?>
-					</div>
-					<div>
-						<a href="<?php the_permalink(); ?>"><?php the_title( '<h4>', '</h4>' ); ?></a>
-						<?php the_content(); ?>
-						<p class="class-price">Price: <?php echo CFS()->get( 'price' ); ?></p>
-					</div>
+						<?php /* Start the Loop */ ?>
+						<?php while ( have_posts() ) : the_post(); ?>
+							<?php if ( has_post_thumbnail() ) : ?>
+								<div class="package-child">
+									<div class="pack-title-link-wrapper">
+										<div class="category-image-loop">
+											<?php the_post_thumbnail( 'large' ); ?>
+										<?php endif; ?>
+									</div>
+									<div class="package-title-wrapper">
+										<div class="pack-title">
+											<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+											<a href="<?php echo get_permalink()?>" class="pack-link">read more</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						<?php endwhile; ?>
+						<?php the_posts_navigation(); ?>
+					<?php else : ?>
+						<?php get_template_part( 'template-parts/content', 'none' ); ?>
+					<?php endif; ?>
 				</div>
-			<?php endwhile; ?>
-			<?php the_posts_navigation(); ?>
-		<?php else : ?>
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-		<?php endif; ?>
+			</section>
+		</article>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

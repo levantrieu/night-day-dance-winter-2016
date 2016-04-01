@@ -51,6 +51,16 @@ li > ol {
 	margin-left: $base__space-unit;
 }
 
+ul {
+	list-style: circle;
+
+	li {
+		font-family: 'Brandon';
+		font-size: 1.5rem;
+		margin: 0.5rem 0;
+	}
+}
+
 dt {
 	font-weight: bold;
 }

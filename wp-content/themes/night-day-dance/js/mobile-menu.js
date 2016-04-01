@@ -23,7 +23,10 @@ $(function() {
 });
 
 // sub-menu code //////////////////// sub-menu code /////////////////
-
+// $('.menu-item-has-children').on('hover',function(){
+// 	$('.sub-menu').slideToggle();
+//
+// })
 // end sub-menu code //////////////////// sub-menu code /////////////
 
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD

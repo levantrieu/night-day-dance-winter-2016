@@ -34,14 +34,14 @@
 							</button>
 							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 							<div id="ndd-search" class="ndd-search">
-								<form>
-									<input class="ndd-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+								<form  role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+									<input class="ndd-search-input" placeholder="Enter your search term..." type="text" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" id="search">
 									<input class="ndd-search-submit" type="submit" value="">
 									<span class="ndd-icon-search"><i class="fa fa-search"></i></span>
 								</form>
 							</div>
-							<script src="/wp-content/themes/night-day-dance/js/classie.js"></script>
-							<script src="/wp-content/themes/night-day-dance/js/uisearch.js"></script>
+							<script src="<?php echo get_template_directory_uri() ?>/build/js/classie.min.js"></script>
+							<script src="<?php echo get_template_directory_uri() ?>/build/js/uisearch.min.js"></script>
 				<script>
 					new UISearch( document.getElementById( 'ndd-search' ) );
 				</script>

@@ -28,7 +28,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Elements
 # Forms
 # Navigation
-	## Links
+	## Link
 	## Menus
 # Accessibility
 # Alignments
@@ -70,27 +70,3 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "categorypackages";
 
 @import "about";
-
-
-// Global styles
-
-html {
-	font-size: 16px;
-}
-
-h1 {
-	font-family: 'Roboto Slab';
-	font-size: 2rem;
-	text-transform: uppercase;
-	color: $color__brand-one;
-}
-
-ul {
-	list-style: circle;
-
-	li {
-		font-family: 'Brandon';
-		font-size: 1.5rem;
-		margin: 0.5rem 0;
-	}
-}
