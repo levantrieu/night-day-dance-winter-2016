@@ -445,8 +445,16 @@
   text-align: center;
   align-self: center;
 
+  @include desktop {
+    background-size: contain;
+    max-width: 250px;
+    max-height: 300px;
+    overflow: hidden;
+  }
+
   img {
     max-width: 250px;
+    object-fit: contain;
   }
 }
 

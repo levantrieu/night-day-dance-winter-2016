@@ -416,10 +416,11 @@ a {
     }
   }
 
-  .item-cat {
+  .item-cat, .item-parent, .item-current {
     font-family: 'Roboto Slab', sans-serif;
     font-size: 1.25rem;
     font-weight: bold;
+    color: #5D5D5D;
     text-transform: uppercase;
     padding: 0;
 

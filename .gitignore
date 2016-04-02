@@ -52,7 +52,6 @@ wp-content/*
 # ========================================================== #
 wp-content/plugins/*
 !wp-content/plugins/ndd-functionality/
-!wp-content/plugins/custom-field-suite/
 !wp-content/plugins/responsive-menu/
 
 # Ignore everything in "themes" except the active theme. #

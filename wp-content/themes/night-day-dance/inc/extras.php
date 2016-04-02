@@ -21,37 +21,6 @@ function red_starter_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'red_starter_body_classes' );
 
-
-// function query_post_type($query) {
-//   if(is_category() || is_tag()) {
-//     $post_type = get_query_var('post_type');
-// 	if($post_type)
-// 	    $post_type = $post_type;
-// 	else
-// 	    $post_type = array('post','instructors');
-//     $query->set('post_type',$post_type);
-// 	return $query;
-//     }
-// }
-// add_filter('pre_get_posts', 'query_post_type');
-
-/*
-** Filter archive post loops.
-*/
-
-// function ndd_modify_archive_loop( $query ) {
-// 	if ( is_post_type_archive( array ( 'instructors' ) ) && !is_admin() && $query->is_main_query() ) {
-// 		$query->set( 'orderby', 'slug' );
-// 		$query->set( 'order', 'DESC' );
-// 		$query->set( 'posts_per_page', -1 );
-// 	}
-// }
-// add_action( 'pre_get_posts', 'ndd_modify_archive_loop' );
-
-/*
-** Filter title archive.
-*/
-
 function ndd_archive_title( $title ) {
 	if ( is_post_type_archive( array( 'instructors') ) ) {
 		$title = 'Meet the Team';

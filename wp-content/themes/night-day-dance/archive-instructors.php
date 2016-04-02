@@ -20,12 +20,14 @@ get_header(); ?>
 		<?php $post_type = 'instructors'; ?>
 
 		<!-- Get all the taxonomies for this post type -->
-		<?php $taxonomies = get_object_taxonomies( array('post_type' => $post_type) ); ?>
+		<?php
+			$taxonomies = get_object_taxonomies( array('post_type' => $post_type) );
+		?>
 
 		<?php foreach( $taxonomies as $taxonomy ) : ?>
 
 			<!-- // Gets every "category" (term) in this taxonomy to get the respective posts -->
-			<?php $terms = get_terms( $taxonomy ); ?>
+			<?php $terms = get_terms( $taxonomy, array( 'order' => 'DESC', 'orderby' => 'label' ) ); ?>
 
 			<?php foreach( $terms as $term ) : ?>
 
@@ -37,7 +39,8 @@ get_header(); ?>
 						'posts_per_page' => -1,  //show all posts
 						'hide_empty' => 0,
 						'post_status' => 'publish',
-						'order' => 'DESC',
+						'order' => 'ASC',
+						'orderby' => 'title',
 						'tax_query' => array(
 							array(
 								'taxonomy' => $taxonomy,
