@@ -1505,6 +1505,11 @@ object {
       margin-bottom: 50px; } }
 
 /* Instructor Archive */
+@media all and (min-width: 1024px) {
+  .content-area-instructors {
+    width: 1024px;
+    margin: 0 auto; } }
+
 .site-main {
   margin: 0 auto;
   padding: 0 3rem; }
@@ -1537,8 +1542,8 @@ object {
   font-weight: bold;
   color: #282f72;
   text-transform: uppercase;
-  border-bottom: 10px solid #f0efef;
-  margin: 0 0 0.5rem 0; }
+  border-bottom: 10px solid #BCBCBC;
+  margin: 0 1rem 0.5rem 1rem; }
   @media all and (min-width: 1024px) {
     .instructor-location {
       font-family: 'Brandon', sans-serif;
@@ -1546,7 +1551,7 @@ object {
       font-weight: bold;
       color: #282f72;
       text-transform: uppercase;
-      border-bottom: 10px solid #f0efef; } }
+      border-bottom: 10px solid #BCBCBC; } }
 
 .location-group {
   display: -webkit-flex;
@@ -1558,7 +1563,7 @@ object {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin: 0 0 2.5rem 0; }
+  margin: 0 1rem 2.5rem 1rem; }
 
 .instructor-single {
   text-align: center;
@@ -1577,12 +1582,16 @@ object {
       -webkit-flex: 0 1 20%;
           -ms-flex: 0 1 20%;
               flex: 0 1 20%; } }
+  .instructor-single:nth-child(1n + 1) {
+    margin: 0; }
+    @media all and (min-width: 1024px) {
+      .instructor-single:nth-child(1n + 1) {
+        margin: 0 0 0 0.75rem; } }
   .instructor-single a, .instructor-single a:visited {
     font-family: 'Brandon', sans-serif;
     font-size: 1.25rem;
     color: #282f72;
-    text-decoration: none;
-    text-transform: uppercase; }
+    text-decoration: none; }
     .instructor-single a:hover, .instructor-single a:visited:hover {
       color: #d12027; }
 

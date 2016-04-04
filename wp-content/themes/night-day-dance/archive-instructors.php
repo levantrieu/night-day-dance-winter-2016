@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+<div id="primary" class="content-area-instructors">
 	<header class="page-header">
 		<?php
 		the_archive_title( '<h1 class="page-title">', '</h1>' );

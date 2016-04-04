@@ -18,7 +18,7 @@ get_header(); ?>
 					<?php if ( has_post_thumbnail() ) : ?>
 						<div class="instructor-pic-frame">
 							<div class="instructor-single-pic"><?php the_post_thumbnail( 'large' ); ?></div>
-						</div>	
+						</div>
 					<?php endif; ?>
 					<div class="instructor-name-bio">
 						<div class="entry-header instructor-single-name">
