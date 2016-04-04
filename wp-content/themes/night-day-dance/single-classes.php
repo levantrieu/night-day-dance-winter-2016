@@ -9,9 +9,9 @@ get_header(); ?>
 
 <div id="primary" class="content-area classes site-container">
 	<main id="main" class="site-main" role="main">
-
+		<article>
 		<?php while ( have_posts() ) : the_post(); ?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 			<div class="header-feature-img">
 					<header class="class-header">
@@ -27,12 +27,16 @@ get_header(); ?>
 						<?php endif; ?>
 					</section>
 			</div>
+			<?php endwhile; // End of the loop. ?>
+		</div>
 
 			<div class="book-beatles-bring">
 					<section class="book-now">
-						<p class="class-price"><?php echo CFS()->get( 'price' ); ?></p>
-						<p class="class-length"><?php echo CFS()->get( 'class_length' ); ?></p>
-						<div class="persian-wrapper"><button class="book-now-btn">Book Now</button></div>
+								<p class="class-price"><?php echo CFS()->get( 'price' ); ?></p>
+								<p class="class-length"><?php echo CFS()->get( 'class_length' ); ?></p>
+						<div class="persian-wrapper">
+							<button class="book-now-btn">Book Now</button>
+						</div>
 					</section>
 
 					<section class="class-beatles">
@@ -52,15 +56,61 @@ get_header(); ?>
 				<i class="fa fa-quote-right"></i>
 			</section>
 
-			<div class="class-double-dance">
-			  <h1>Last Minute Double Dance</h1>
-			</div>
+			<!-- our other products loop -->
 
-			<!-- .entry-content -->
+				<section>
+					<div class="single-related-title">
+						Our Other Packages
+					</div>
+						<div class="related-loop-wrapper">
+							<?php	global $post;
+							 $terms = get_the_terms( $post->ID , 'class-type', 'string');
+							 $do_not_duplicate[] = $post->ID;
+
+					 	 if(!empty($terms)){
+								//  echo '<div class="single-related-title">Our Other Packages</div>';
+
+								 foreach ($terms as $term) {
+										 query_posts( array(
+										 'post_type' => 'classes',
+										 'class-type' => $term->slug,
+										 'posts_per_page' => 3,
+										 'ignore_sticky_posts' => 1,
+										 'orderby' => 'rand',
+										 'post__not_in' => $do_not_duplicate) );
+										 if(have_posts()) {
+											 while ( have_posts() ) : the_post(); $do_not_duplicate[] = $post->ID; ?>
+
+											 <div class="related-child"> <!-- categorypackages.scss -->
+												 <div class="related-title-link-wrapper">
+												<div class="related-image-loop">
+											 	<?php if (has_post_thumbnail()) { ?>
+													<?php the_post_thumbnail( 'medium', array('alt' => get_the_title()) ); ?>
+												</div>
+																<div class="related-title-wrapper">
+																	<div class="related-title">
+																		<?php the_title('<h3 class="related-page-title">','</h3>');?>
+																				<a href="<?php the_permalink() ?>" class="pack-link" title="<?php the_title(); ?>">read more</a>
+																					</div>
+																				<?php } else { ?>
+																		<div>
+																		<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+													 		</div>
+												 	 <?php } ?>
+											 	</div>
+											</div>
+										</div>
+											 <?php endwhile; wp_reset_query();
+									 }
+							 	}
+					 		}
+					 ?>
+ 			 				</div> <!-- single related parent div -->
+				 		</div>
+				 	</div>
+				</section>
 		</article>
-	<?php endwhile; // End of the loop. ?>
-
 	</main><!-- #main -->
-</div><!-- #primary -->
+</div> <!-- #primary -->
 
 <?php get_footer(); ?>
