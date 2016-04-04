@@ -1921,6 +1921,10 @@ object {
         -ms-flex-item-align: center;
             align-self: center; }
 
+/* FAQ Page */
+.post-121 h1 {
+  display: none; }
+
 .site-footer {
   width: 100%;
   padding-top: 3rem; }
