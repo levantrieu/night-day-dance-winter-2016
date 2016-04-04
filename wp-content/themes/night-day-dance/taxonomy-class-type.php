@@ -10,13 +10,20 @@ get_header(); ?>
 <div id="primary" class="content-area site-container class-type">
 	<main id="main" class="site-main" role="main">
 		<article>
+
 			<div class="desktop-border">
 				<img src="<?php echo get_template_directory_uri() ?>/images/couple-legs.jpg" alt="Legs Dance Class" height="100%" width="100%">
 				<h2 class="child-title">it takes two to tango</h2>
 			</div>
-			<section class="top-text-block">
-			a dance routine just as unique as your love.
+
+			<section class="decor-text-block-wrapper">
+					<div class="top-text-block">a dance routine just as unique as your love.
+					</div>
+					<div class="decoration">
+					<img src="<?php echo get_template_directory_uri() ?>/images/Bitmap.png" alt="Night Day Dance Decoration" height="100%" width="100%"/>
+					</div>
 			</section>
+
 			<section>
 				<div class="package-loop-wrapper">
 					<?php if ( have_posts() ) : ?>
