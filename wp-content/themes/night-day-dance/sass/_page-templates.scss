@@ -3,9 +3,7 @@
 --------------------------------------------------------------*/
 
 /* Front page */
-.content-area {
-  // width:1024px;
-}
+
 .fc-wrapper {
   position: relative;
 }
@@ -279,6 +277,13 @@
 
 /* Instructor Archive */
 
+.content-area-instructors {
+  @include desktop {
+  width: 1024px;
+  margin: 0 auto;
+  }
+}
+
 .site-main {
   margin: 0 auto;
 
@@ -310,8 +315,8 @@
   font-weight: bold;
   color: $color__brand-one;
   text-transform: uppercase;
-  border-bottom: 10px solid $color__brand-six;
-  margin: 0 0 0.5rem 0;
+  border-bottom: 10px solid #BCBCBC;
+  margin: 0 1rem 0.5rem 1rem;
 
   @include desktop {
     font-family: 'Brandon', sans-serif;
@@ -319,7 +324,7 @@
     font-weight: bold;
     color: $color__brand-one;
     text-transform: uppercase;
-    border-bottom: 10px solid $color__brand-six;
+    border-bottom: 10px solid #BCBCBC;
   }
 }
 
@@ -327,7 +332,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: 0 0 2.5rem 0;
+  margin: 0 1rem 2.5rem 1rem;
 }
 
 .instructor-single {
@@ -341,12 +346,19 @@
     flex: 0 1 20%;
   }
 
+  &:nth-child(1n + 1) {
+    margin: 0;
+
+    @include desktop {
+      margin: 0 0 0 0.75rem;
+    }
+  }
+
   a, a:visited {
     font-family: 'Brandon', sans-serif;
     font-size: 1.25rem;
     color: $color__brand-one;
     text-decoration: none;
-    text-transform: uppercase;
 
     &:hover {
       color: $color__brand-three;
@@ -565,5 +577,13 @@
 
   div {
     align-self: center;
+  }
+}
+
+/* FAQ Page */
+
+.post-121 {
+  h1 {
+  display: none;
   }
 }
