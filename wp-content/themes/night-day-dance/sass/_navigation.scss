@@ -192,7 +192,7 @@ nav .menu-item {
 }
 
 .ndd-logo img {
-  padding: 20px 0 0 20px;
+  padding: 20px 0 .4em 20px;
   width:90%;
   min-width:160px;
 }
@@ -249,7 +249,7 @@ a {
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
-    padding-top: 8%;
+    padding-top: 1px;
   }
 
 
@@ -268,8 +268,6 @@ a {
 		padding-left: 70px;
     @include desktop {
       padding-left: 1px;
-
-
     }
 
     ul {
