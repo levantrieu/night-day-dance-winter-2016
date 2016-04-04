@@ -62,7 +62,7 @@ gulp.task('browser-sync', function() {
     browserSync.init(files, {
 
 
-        proxy: 'localhost',
+        proxy: 'night_day_dance.dev',
 
     });
 });
