@@ -870,7 +870,11 @@ nav .menu-item {
   background: #fff; }
 
 .ndd-logo img {
+
   padding: 20px 0 .4em 20px;
+
+  padding: 20px 0 0 20px;
+
   width: 90%;
   min-width: 160px; }
 
@@ -925,7 +929,11 @@ a {
       -webkit-justify-content: flex-end;
           -ms-flex-pack: end;
               justify-content: flex-end;
+
       padding-top: 1px; } }
+
+
+
   .main-navigation ul {
     font-weight: 700;
     list-style: none;
@@ -1043,6 +1051,7 @@ a {
     @media all and (min-width: 1024px) {
       .breadcrumbs .bread-current {
         font-size: 1rem; } }
+
   .breadcrumbs .item-cat, .breadcrumbs .item-parent, .breadcrumbs .item-current {
     font-family: 'Roboto Slab', sans-serif;
     font-size: 1.25rem;
@@ -1055,6 +1064,19 @@ a {
       text-decoration: none; }
     @media all and (min-width: 1024px) {
       .breadcrumbs .item-cat, .breadcrumbs .item-parent, .breadcrumbs .item-current {
+
+  .breadcrumbs .item-cat {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0; }
+    .breadcrumbs .item-cat a, .breadcrumbs .item-cat a:visited {
+      color: #5D5D5D;
+      text-decoration: none; }
+    @media all and (min-width: 1024px) {
+      .breadcrumbs .item-cat {
+
         font-size: 1rem; } }
   .breadcrumbs .separator {
     font-size: 1.5rem;
@@ -2766,6 +2788,7 @@ img {
   display: none;
   visibility: 0; }
 
+
 .desktop-ac {
   display: none;
   visibility: 0; }
@@ -2815,6 +2838,59 @@ img {
     @media all and (min-width: 1024px) {
       .about-buttons .about-contact {
         display: none; } }
+
+
+
+.desktop-ac {
+  display: none;
+  visibility: 0; }
+
+.about-buttons {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px; }
+  .about-buttons .about-book {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100px;
+    height: 30px;
+    background-color: #1A2776;
+    color: #F6C11E; }
+    @media all and (min-width: 1024px) {
+      .about-buttons .about-book {
+        display: none; } }
+  .about-buttons .about-contact {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100px;
+    height: 30px;
+    background-color: #1A2776;
+    color: #F6C11E; }
+    @media all and (min-width: 1024px) {
+      .about-buttons .about-contact {
+        display: none; } }
+
 
 @media all and (min-width: 1024px) {
   .about-p-wrapper {
