@@ -2197,6 +2197,17 @@ object {
       width: 20%;
       font-size: 1.5rem;
       line-height: 2rem; } }
+  .footer-form .info-wrapper .menu-item-type-post_type {
+    display: none; }
+    @media all and (min-width: 1024px) {
+      .footer-form .info-wrapper .menu-item-type-post_type {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 1rem; }
+        .footer-form .info-wrapper .menu-item-type-post_type a {
+          color: white;
+          text-decoration: none; } }
   @media all and (min-width: 1024px) {
     .footer-form .css-footer-menu {
       margin: 0 auto; } }
@@ -2214,18 +2225,6 @@ object {
   @media all and (min-width: 1024px) {
     .menu-footermenu {
       margin: 0 auto; } }
-
-.menu-item-type-post_type {
-  display: none; }
-  @media all and (min-width: 1024px) {
-    .menu-item-type-post_type {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      font-size: 1rem; }
-      .menu-item-type-post_type a {
-        color: white;
-        text-decoration: none; } }
 
 .header-feature-img {
   display: -webkit-flex;

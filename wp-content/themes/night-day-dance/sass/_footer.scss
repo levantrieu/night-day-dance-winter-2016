@@ -141,7 +141,22 @@
       font-size:1.5rem;
       line-height: 2rem;
     }
+
+    .menu-item-type-post_type {
+      display:none;
+
+      @include desktop {
+        display:flex;
+        font-size:1rem;
+
+        a {
+          color:white;
+          text-decoration: none;
+        }
+      }
+    }
   }
+
   .css-footer-menu {
     @include desktop {
       margin:0 auto;
@@ -166,17 +181,5 @@
   display:none;
   @include desktop {
       margin:0 auto;
-  }
-}
-
-.menu-item-type-post_type {
-  display:none;
-  @include desktop {
-    display:flex;
-    font-size:1rem;
-    a{
-      color:white;
-      text-decoration: none;
-    }
   }
 }
