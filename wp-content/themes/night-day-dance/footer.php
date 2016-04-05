@@ -28,9 +28,9 @@
         </div>
       </div>
       <div class="icon-wrapper">
-        <div class="icons"><a href="https://www.facebook.com/nightanddaydance/"><i class="fa fa-facebook fa-lg"></i></div>
-        <div class="icons"><a href="https://twitter.com/nddance"><i class="fa fa-twitter fa-lg"></i></div>
-        <div class="icons"><a ><i class="fa fa-instagram fa-lg"></i></div>
+        <div class="icons"><a href="https://www.facebook.com/nightanddaydance/"><i class="fa fa-facebook fa-lg"></i></a><</div>
+        <div class="icons"><a href="https://twitter.com/nddance"><i class="fa fa-twitter fa-lg"></i></a></div>
+        <div class="icons"><a href="#"><i class="fa fa-instagram fa-lg"></i></a><</div>
       </div>
       <div class="info-wrapper">
         <?php wp_nav_menu( array(
@@ -44,5 +44,3 @@
 </footer><!-- #colophon -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
-</body>
-</html>

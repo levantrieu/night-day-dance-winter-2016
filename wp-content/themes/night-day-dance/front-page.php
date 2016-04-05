@@ -42,8 +42,8 @@ get_header(); ?>
           <h3 class="mt red">office parties just<br>got exciting</h3>
         </span>
         <form class="df">
-        <button class="friends" type="submit">dance with friends <i class="fa fa-arrow-right"></i></button>
-      </form>
+          <button class="friends" type="submit">dance with friends <i class="fa fa-arrow-right"></i></button>
+        </form>
         <span class="border three">
           <h2>dance with <br>your <br>friends</h2>
         </span>
@@ -53,10 +53,10 @@ get_header(); ?>
   <div class="title-wrapper">
     <div class="title">
       <?php if ( is_active_sidebar( 'home_right_1' ) ) : ?>
-	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-		<?php dynamic_sidebar( 'home_right_1' ); ?>
-	</div><!-- #primary-sidebar -->
-<?php endif; ?>
+        <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+          <?php dynamic_sidebar( 'home_right_1' ); ?>
+        </div><!-- #primary-sidebar -->
+      <?php endif; ?>
 
       <div class="round"></div>
     </div>
@@ -65,12 +65,11 @@ get_header(); ?>
     <h2>get ready to dance</h2>
     <div class="front-page-image">
       <form class="bc-wrapper" action="/contact/" method="get" >
-      <button class="contact-us-img" type="submit">contact us</button>
-    </form>
+        <button class="contact-us-img" type="submit">contact us</button>
+      </form>
     </div>
   </div>
-
-
+    
   <!-- </main> -->
 </div><!-- #primary -->
 

@@ -603,9 +603,11 @@ flex-direction: column;
     background: url(../../images/Bitmap.png)no-repeat center;
   }
 }
+
 .lm {
   display: none;
   visibility: 0;
+  
   @include desktop {
     display:flex;
     justify-content: center;
@@ -621,6 +623,7 @@ flex-direction: column;
     }
   }
 }
+
 .df {
   display:none;
   visibility: 0;
@@ -642,6 +645,7 @@ flex-direction: column;
 .button-form {
      display:none;
      visibility: 0;
+
     @include desktop {
       text-transform: uppercase;
       display:flex;
