@@ -11,12 +11,8 @@ get_header(); ?>
     <div class="container">
 
       <section class="helping">
-        <div class="about-main-image">
-          <!-- <img class="about-image" src="<?php echo get_template_directory_uri() . '/images/couple-dancing' ?>.jpg" alt="people dancing"/> -->
-        </div>
-        <div class="about-p-wrapper">
-          <p>Helping Every Day <br>
-          People Dance For Life</p>
+        <div class="about-text">
+          <p>Helping Every Day<br/>People Dance For Life!</p>
         </div>
       </section>
 
