@@ -2587,70 +2587,50 @@ img {
         background: rgba(150, 25, 85, 0.8);
         margin: 0 2rem 2rem 0; } }
 
-@media all and (min-width: 1024px) {
-  .about-p-wrapper {
-    background: rgba(252, 252, 252, 0.7);
-    background-size: cover;
-    position: absolute;
-    top: 110px;
-    left: 250px;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-align-content: center;
-        -ms-flex-line-pack: center;
-            align-content: center;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 250px;
-    width: 700px; } }
-
 .helping {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), url(../../images/about-us.png) top no-repeat center;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center; }
-  .helping p {
-    color: #1A2776;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    position: relative;
-    bottom: 170px; }
-    @media all and (min-width: 1024px) {
-      .helping p {
-        font-family: 'Roboto Slab', sans-serif;
-        color: #1A2776;
-        font-size: 3rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        position: relative;
-        top: 10px; } }
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-size: cover;
+  text-align: center;
+  height: 250px; }
   @media all and (min-width: 1024px) {
     .helping {
-      height: 500px;
-      margin-bottom: 80px;
-      position: relative; }
-      .helping .about-main-image {
-        width: 100%;
-        height: 800px;
-        overflow: hidden;
-        background: url(../../images/couple-dancing.jpg) top -200px no-repeat center;
-        background-size: cover; }
-        .helping .about-main-image .about-image {
-          background: linear-gradient(to bottom, rgba(252, 252, 252, 0.7) 0%, rgba(252, 252, 252, 0.7) 100%); } }
+      background: url(../../images/about-us.png) top no-repeat center;
+      background-size: cover;
+      height: 474px;
+      margin: 0 0 4rem 0; } }
+
+.about-text {
+  font-family: 'Roboto Slab', sans-serif;
+  color: #1A2776;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  padding: 1rem; }
+  @media all and (min-width: 1024px) {
+    .about-text {
+      font-size: 3rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 0 2rem;
+      width: 60%;
+      height: auto; } }
 
 .who-we-are {
   display: -webkit-flex;
@@ -2711,7 +2691,7 @@ img {
   @media all and (min-width: 1024px) {
     .about-content {
       height: 300px;
-      margin-bottom: 80px; } }
+      margin: 0 0 4rem 0; } }
   .about-content .desktop-ac {
     display: none;
     visibility: 0; }
@@ -2846,70 +2826,50 @@ img {
       .about-buttons .about-contact {
         display: none; } }
 
-@media all and (min-width: 1024px) {
-  .about-p-wrapper {
-    background: rgba(252, 252, 252, 0.7);
-    background-size: cover;
-    position: absolute;
-    top: 110px;
-    left: 250px;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-align-content: center;
-        -ms-flex-line-pack: center;
-            align-content: center;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 250px;
-    width: 700px; } }
-
 .helping {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), url(../../images/about-us.png) top no-repeat center;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center; }
-  .helping p {
-    color: #1A2776;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    position: relative;
-    bottom: 170px; }
-    @media all and (min-width: 1024px) {
-      .helping p {
-        font-family: 'Roboto Slab', sans-serif;
-        color: #1A2776;
-        font-size: 3rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        position: relative;
-        top: 10px; } }
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-size: cover;
+  text-align: center;
+  height: 250px; }
   @media all and (min-width: 1024px) {
     .helping {
-      height: 500px;
-      margin-bottom: 80px;
-      position: relative; }
-      .helping .about-main-image {
-        width: 100%;
-        height: 800px;
-        overflow: hidden;
-        background: url(../../images/couple-dancing.jpg) top -200px no-repeat center;
-        background-size: cover; }
-        .helping .about-main-image .about-image {
-          background: linear-gradient(to bottom, rgba(252, 252, 252, 0.7) 0%, rgba(252, 252, 252, 0.7) 100%); } }
+      background: url(../../images/about-us.png) top no-repeat center;
+      background-size: cover;
+      height: 474px;
+      margin: 0 0 4rem 0; } }
+
+.about-text {
+  font-family: 'Roboto Slab', sans-serif;
+  color: #1A2776;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  padding: 1rem; }
+  @media all and (min-width: 1024px) {
+    .about-text {
+      font-size: 3rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 0 2rem;
+      width: 60%;
+      height: auto; } }
 
 .who-we-are {
   display: -webkit-flex;
@@ -2970,7 +2930,7 @@ img {
   @media all and (min-width: 1024px) {
     .about-content {
       height: 300px;
-      margin-bottom: 80px; } }
+      margin: 0 0 4rem 0; } }
   .about-content .desktop-ac {
     display: none;
     visibility: 0; }
