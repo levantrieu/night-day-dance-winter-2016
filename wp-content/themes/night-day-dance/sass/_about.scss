@@ -1,31 +1,21 @@
-// .container {
-//   @include desktop {
-// width:1024px;
-// }
-// }
-// .about-shadow {
-  // width:100%;
-  // height:100%;
-  // opacity: 0.4;
-
-// }
 .about-p-wrapper {
   @include desktop {
-  background: rgba(252, 252, 252,0.7);
-  background-size:cover;
-  position:relative;
-  top:30px;
-  display:flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  line-height:0;
-  height:300px;
-  width:500px;
-  .second-line {
-    margin-bottom: 250px;
+    background: rgba(252, 252, 252,0.7);
+    background-size:cover;
+    position: absolute;
+    top: 110px;
+    left: 250px;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height: 250px;
+    width: 700px;
+
+    // .second-line {
+    //   margin-bottom: 250px;
+    // }
   }
- }
 }
 
 .helping {
@@ -34,33 +24,45 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
+
   p {
     color:#1A2776;
     font-size: 1.2rem;
     text-transform: uppercase;
     position: relative;
     bottom:170px;
+
     @include desktop {
+      font-family: 'Roboto Slab', sans-serif;
       color:#1A2776;
-      font-size: 2rem;
+      font-size: 3rem;
+      font-weight: bold;
       text-transform: uppercase;
       position: relative;
-      top: 100px;
+      top: 10px;
     }
   }
+
   @include desktop {
     height:500px;
     margin-bottom: 80px;
-    .about-image {
-      width:90%;
-      height:70%;
-      background:  linear-gradient(to bottom, rgba(252, 252, 252,0.7) 0%, rgba(252, 252, 252,0.7) 100%);
+    position: relative;
+
+    .about-main-image {
+      width: 100%;
+      height: 800px;
+      overflow: hidden;
+      background:
+      url(../../images/couple-dancing.jpg)top -200px no-repeat center;
       background-size: cover;
-      position: absolute;
-      // right:80px;
+
+      .about-image {
+        background: linear-gradient(to bottom, rgba(252, 252, 252,0.7) 0%, rgba(252, 252, 252,0.7) 100%);
+      }
     }
   }
 }
+
 .who-we-are {
   display:flex;
   justify-content: center;
@@ -70,15 +72,17 @@
   width:100%;
   font-size: 1.7rem;
 }
+
 .about-content {
   display:flex;
   justify-content: center;
   background-color:#F6C11E;
   flex-direction: column;
   align-items: center;
-  color:#85CEEE;
+  color: $color__brand-one;
   height:200px;
   width:100%;
+
   p {
     width:80%;
     font-size: 1rem;
@@ -87,24 +91,32 @@
       visibility: 0;
     }
   }
-  .ab-desktop{
+
+  .ab-desktop {
     display: none;
     visibility: 0;
+
     @include desktop {
+      text-transform: uppercase;
       display:flex;
       justify-content: center;
       width:200px;
       height:30px;
       background-color: white;
+      margin: 0 0 2rem 0;
+      border: none;
     }
   }
+
   @include desktop {
     height:300px;
     margin-bottom:80px;
   }
+
   .desktop-ac {
     display:none;
     visibility: 0;
+
     @include desktop {
       display:flex;
       font-size: 1.5rem;
@@ -114,6 +126,7 @@
     }
   }
 }
+
 .about-location {
   display:flex;
   justify-content: center;
@@ -122,6 +135,7 @@
   height:70px;
   font-size: 1.7rem;
 }
+
 .location {
   display:flex;
   justify-content: center;
@@ -131,50 +145,62 @@
   color:#1A2776;
   height:200px;
   width:100%;
+
   p {
     width:80%;
+
     @include desktop {
       display:none;
       visibility: 0;
     }
   }
+
   @include desktop {
     height:300px;
     margin-bottom: 60px;
+
     .desktop-location {
       display:flex;
       font-size: 1.5rem;
       width:55%;
       text-align: center;
       margin-top: 40px;
-
     }
   }
-  .ac-desktop{
+
+  .ac-desktop {
     display: none;
     visibility: 0;
+
     @include desktop {
+      text-transform: uppercase;
       display:flex;
       justify-content: center;
       width:200px;
       height:30px;
       background-color: white;
+      margin: 0 0 2rem 0;
+      border: none;
     }
   }
 }
-.desktop-location{
+
+.desktop-location {
   display: none;
   visibility: 0;
 }
+
 .desktop-ac {
   display: none;
   visibility: 0;
 }
+
 .about-buttons {
   display:flex;
   justify-content: space-around;
   align-items: center;
   height:100px;
+
   .about-book {
     display:flex;
     justify-content: center;
@@ -183,10 +209,12 @@
     height:30px;
     background-color: #1A2776;
     color:#F6C11E;
+
     @include desktop {
       display:none;
     }
   }
+
   .about-contact {
     display:flex;
     justify-content: center;
@@ -195,6 +223,7 @@
     height:30px;
     background-color: #1A2776;
     color:#F6C11E;
+
     @include desktop {
       display:none;
     }
