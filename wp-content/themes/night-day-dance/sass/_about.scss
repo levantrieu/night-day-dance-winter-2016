@@ -1,14 +1,3 @@
-// .container {
-//   @include desktop {
-// width:1024px;
-// }
-// }
-// .about-shadow {
-  // width:100%;
-  // height:100%;
-  // opacity: 0.4;
-
-// }
 .about-p-wrapper {
   @include desktop {
   background: rgba(252, 252, 252,0.7);
@@ -111,6 +100,7 @@
       width:55%;
       text-align: center;
       margin-top: 40px;
+      color:#91A8D0;
     }
   }
 }
