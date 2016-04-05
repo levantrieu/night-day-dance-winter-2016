@@ -154,3 +154,29 @@
     }
   }
 }
+.info-wrapper {
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    width:20%;
+  }
+
+}
+.menu-footermenu {
+  display:none;
+  @include desktop {
+      margin:0 auto;
+  }
+}
+
+.menu-item {
+  display:none;
+  @include desktop {
+    display:flex;
+    font-size:1rem;
+    a{
+      color:white;
+      text-decoration: none;
+    }
+  }
+}

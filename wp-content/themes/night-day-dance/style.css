@@ -1388,6 +1388,8 @@ object {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%; }
+  .fc-wrapper h2 {
+    font-size: 1.5rem; }
   @media all and (min-width: 1024px) {
     .fc-wrapper {
       width: 100%;
@@ -1936,7 +1938,9 @@ object {
             align-self: center; }
 
 /* FAQ Page */
+
 .post-108 h1 {
+.post-121 h1 {
   display: none; }
 
 .site-footer {
@@ -2115,6 +2119,34 @@ object {
   @media all and (min-width: 1024px) {
     .footer-form .form-wrapper {
       width: 350px; } }
+
+@media all and (min-width: 1024px) {
+  .info-wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 20%; } }
+
+.menu-footermenu {
+  display: none; }
+  @media all and (min-width: 1024px) {
+    .menu-footermenu {
+      margin: 0 auto; } }
+
+.menu-item {
+  display: none; }
+  @media all and (min-width: 1024px) {
+    .menu-item {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      font-size: 1rem; }
+      .menu-item a {
+        color: white;
+        text-decoration: none; } }
 
 .header-feature-img {
   display: -webkit-flex;
@@ -2723,7 +2755,8 @@ img {
         font-size: 1.5rem;
         width: 55%;
         text-align: center;
-        margin-top: 40px; } }
+        margin-top: 40px;
+        color: #91A8D0; } }
 
 .about-location {
   display: -webkit-flex;
@@ -2982,7 +3015,8 @@ img {
         font-size: 1.5rem;
         width: 55%;
         text-align: center;
-        margin-top: 40px; } }
+        margin-top: 40px;
+        color: #91A8D0; } }
 
 .about-location {
   display: -webkit-flex;
