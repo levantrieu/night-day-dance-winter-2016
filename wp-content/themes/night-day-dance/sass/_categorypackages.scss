@@ -38,21 +38,21 @@
   @include desktop {
     padding:2em;
     display:inline;
-}
+  }
 }
 
 .decoration {
-    margin: 0 auto 3em auto;
-    width:65px;
-    height:65px;
+  margin: 0 auto 3em auto;
+  width:65px;
+  height:65px;
 }
 
 .top-text-block {
-    margin: 0 auto;
-    padding:2em 0 2em 0;
-    text-align: center;
-    font-size: 2em;
-    color:$color__brand-one;
+  margin: 0 auto;
+  padding:2em 0 2em 0;
+  text-align: center;
+  font-size: 2em;
+  color:$color__brand-one;
 }
 
 .desktop-border {
@@ -79,9 +79,9 @@ img {
 }
 
 .desktop-border  {
-    display:none;
-    @include desktop {
-      display:block;
+  display:none;
+  @include desktop {
+    display:block;
   }
 }
 .parent-title {
@@ -104,24 +104,23 @@ img {
   width:500px;
   height:325px;
   overflow:hidden;
-    img {
-      width:500px;
-      height:325px;
-    }
+  img {
+    width:500px;
+    height:325px;
+  }
 }
 
-
 .category-image-loop:before {
-    background: rgba(250,225,85,0.8);
-    overflow: hidden;
-    display: block;
-    content: '';
-    position: absolute;
-    height: 100%;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
+  background: rgba(250,225,85,0.8);
+  overflow: hidden;
+  display: block;
+  content: '';
+  position: absolute;
+  height: 100%;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
 }
 
 .related-image-loop {
@@ -132,29 +131,33 @@ img {
 }
 
 .related-image-loop:before {
-    background: rgba(250,225,85,0.8);
-    overflow: hidden;
-    display: block;
-    content: '';
-    position: absolute;
-    height: 100%;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
+  background: rgba(250,225,85,0.8);
+  overflow: hidden;
+  display: block;
+  content: '';
+  position: absolute;
+  height: 100%;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
 }
 
 .related-title-link-wrapper {// taxonomy-class-type.php
   position:relative;
 }
 
-.related-title-wrapper {
-  display: flex;
-  justify-content: center;
-}
 .related-title-wrapper { // single-class.php
   display: flex;
   justify-content: center;
+
+  a, a:visited {
+    color: $color__brand-one;
+
+    &:hover {
+      color: $color__brand-three;
+    }
+  }
 }
 
 .related-title {
@@ -185,8 +188,8 @@ img {
 .pack-link {
   width:100px;
   padding: 8px 16px;
-  text-tansform:uppercase;
-  border:1px solid red;
+  text-transform: uppercase;
+  border:1px solid $color__brand-one;
   text-decoration:none;
   font-weight:700;
 }
@@ -202,15 +205,15 @@ img {
 }
 
 .package-child {
-    flex: 1 0 48%;
-    max-width: 500px;
+  flex: 1 0 48%;
+  max-width: 500px;
 
-   &:nth-child(odd) {
+  &:nth-child(odd) {
 
     margin:3rem 0 3rem;
     @include desktop {
-    background: rgba(150,25,85,0.8);
-    margin: 0 2rem 2rem 0;
+      background: rgba(150,25,85,0.8);
+      margin: 0 2rem 2rem 0;
     }
   }
 }
