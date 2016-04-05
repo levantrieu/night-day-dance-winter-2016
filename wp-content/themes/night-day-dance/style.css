@@ -2099,7 +2099,18 @@ object {
     .footer-form .info-wrapper {
       color: white;
       text-transform: uppercase;
-      padding-left: 40px; } }
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 20%;
+      font-size: 1.5rem;
+      line-height: 2rem; } }
+  @media all and (min-width: 1024px) {
+    .footer-form .css-footer-menu {
+      margin: 0 auto; } }
   @media all and (min-width: 1024px) {
     .footer-form .icon-wrapper {
       padding-top: 10rem;
@@ -2112,16 +2123,6 @@ object {
   @media all and (min-width: 1024px) {
     .footer-form .form-wrapper {
       width: 350px; } }
-
-@media all and (min-width: 1024px) {
-  .info-wrapper {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 20%; } }
 
 .menu-footermenu {
   display: none; }
