@@ -93,19 +93,10 @@ function red_starter_widgets_init() {
 	}
 	add_action('wp_enqueue_scripts','enqueue_fontawesome_stylesheets');
 
-
-// enqueues our external jQuery to use for mobile menu
-		if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
-		function my_jquery_enqueue() {
-			wp_deregister_script('jquery');
-			wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
-			wp_enqueue_script('jquery');
-	}
-
 // Enqueue custom mobile javascript
 		function ndd_adding_scripts() {
-			wp_register_script('mobile_script', get_template_directory_uri() . '/build/js/mobile-menu.min.js', array('jquery'),'1.1', true);
-			wp_enqueue_script('mobile_script');
+			wp_enqueue_script('jquery');
+			wp_enqueue_script('mobile_script', get_template_directory_uri() . '/build/js/mobile-menu.min.js', array('jquery'),'1.1', true);
 	}
 
 	add_action( 'wp_enqueue_scripts', 'ndd_adding_scripts' );
