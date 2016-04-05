@@ -1045,18 +1045,18 @@ a {
     @media all and (min-width: 1024px) {
       .breadcrumbs .bread-current {
         font-size: 1rem; } }
-  .breadcrumbs .item-cat, .breadcrumbs .item-parent, .breadcrumbs .item-current {
+  .breadcrumbs li, .breadcrumbs .item-cat, .breadcrumbs .item-parent, .breadcrumbs .item-current {
     font-family: 'Roboto Slab', sans-serif;
     font-size: 1.25rem;
     font-weight: bold;
     color: #5D5D5D;
     text-transform: uppercase;
     padding: 0; }
-    .breadcrumbs .item-cat a, .breadcrumbs .item-cat a:visited, .breadcrumbs .item-parent a, .breadcrumbs .item-parent a:visited, .breadcrumbs .item-current a, .breadcrumbs .item-current a:visited {
+    .breadcrumbs li a, .breadcrumbs li a:visited, .breadcrumbs .item-cat a, .breadcrumbs .item-cat a:visited, .breadcrumbs .item-parent a, .breadcrumbs .item-parent a:visited, .breadcrumbs .item-current a, .breadcrumbs .item-current a:visited {
       color: #5D5D5D;
       text-decoration: none; }
     @media all and (min-width: 1024px) {
-      .breadcrumbs .item-cat, .breadcrumbs .item-parent, .breadcrumbs .item-current {
+      .breadcrumbs li, .breadcrumbs .item-cat, .breadcrumbs .item-parent, .breadcrumbs .item-current {
         font-size: 1rem; } }
   .breadcrumbs .separator {
     font-size: 1.5rem;
