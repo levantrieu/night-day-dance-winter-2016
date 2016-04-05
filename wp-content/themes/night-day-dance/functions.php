@@ -105,7 +105,7 @@ function red_starter_widgets_init() {
 	/**
 	* Enqueue custom mobile javascript
 	*/
-	function ndd_adding_scripts() {
+function ndd_adding_scripts() {
 		wp_register_script('mobile_script', get_template_directory_uri() . '/build/js/mobile-menu.min.js', array('jquery'),'1.1', true);
 		wp_enqueue_script('mobile_script');
 	}
