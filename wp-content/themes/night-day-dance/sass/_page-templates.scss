@@ -4,12 +4,9 @@
 
 /* Front page */
 
-.fc-wrapper {
-  position: relative;
-}
-
 .fc-wrapper:before {
   display:none;
+
   @include desktop {
     display: block;
     content: '';
@@ -24,6 +21,7 @@
 }
 
 .fc-wrapper {
+  position: relative;
   display:flex;
   flex-direction: column;
   width:100%;
@@ -34,34 +32,39 @@
     display:flex;
     flex-direction:row;
 
-
     h2 {
       display:none;
       visibility: 0;
     }
+
     .border {
       @include desktop {
         display:none;
         visibility:0;
       }
     }
-    .mt{
+
+    .mt {
       @include desktop {
         color:white;
         font-size: 2.5rem;
         text-align: center;
       }
     }
+
     .red {
       color:red;
       font-size: 1.5rem;
     }
+
     .yellow {
       font-size: 1.5rem;
     }
+
     .book {
       color:white;
     }
+
     .now {
       background-color: #1A2776;
       width:150px;
@@ -71,44 +74,49 @@
       justify-content: center;
       align-items: center;
     }
-    .button-wrapper{
-      height:50%;
+
+    .button-wrapper {
+      text-transform: uppercase;
+      height: 50%;
       display:flex;
       flex-direction: column;
       justify-content: flex-end;
-      width:50%;
+      width: 50%;
     }
-
   }
 }
+
 .title {
   display: none;
   visibility: 0;
 }
+
 .mobile-title-wrapper {
   display:none;
   visibility: 0;
+
   @include desktop {
     display:flex;
     flex-direction: column;
     justify-content:center;
-
     width:90%;
     height:50%;
-    .book-now{
-      border:none;
+
+    .book-now {
+      text-transform: uppercase;
+      border: none;
       background-color:#1A2776;
-      color:white;
-      margin-top:2px;
-      margin-left:50px;
-      height:35px;
-      width:90%;
+      color: white;
+      margin-top: 2px;
+      margin-left: 50px;
+      height: 35px;
+      width: 90%;
       text-align: center;
-
     }
-
   }
+
   .learn-moves {
+    text-transform: uppercase;
     border:none;
     background-color:#F6C11E;
     color:white;
@@ -116,7 +124,9 @@
     width:60%;
     text-align: center;
   }
+
   .friends {
+    text-transform: uppercase;
     border:none;
     color:white;
     background-color:#D12021;
@@ -125,10 +135,12 @@
     text-align: center;
   }
 }
+
 .fpi-wrapper {
   display: none;
   visibility: 0;
 }
+
 .package, .learn, .dance {
   width:100%;
   height:255px;
@@ -136,6 +148,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 5px;
+
   h2 {
     text-align: center;
     width:200px;
@@ -143,44 +156,43 @@
     color:white;
   }
 }
+
 .package{
   background:
   linear-gradient(to bottom, rgba(0, 0, 255, 0.3) 0%, rgba(0, 0, 255, 0.3) 100%),
   url(../../images/S&D-520.jpg)no-repeat center;
   background-size: cover;
-
-
 }
+
 .learn {
   background:
   linear-gradient(to bottom, rgba(206, 188, 33,0.5) 0%, rgba(206, 188, 33,0.5) 100%),
-  url(../../images/landing-page-2.jpg)top no-repeat center;
+  url(../../images/landing-page-2.jpg)top -120px no-repeat center;
   background-size: cover;
-
-
 }
+
 .dance {
   background:
   linear-gradient(to bottom, rgba(252, 252, 252,0.7) 0%, rgba(252, 252, 252,0.7) 100%),
   url(../../images/People-dancing.png)no-repeat center ;
   background-size: cover;
-
-
 }
-.border{
+
+.border {
   border:5px solid #F0F8FF;
   outline:5px solid;
-
 }
-.one{
+
+.one {
   background-color: #1A2776;
   outline:5px solid #1A2776;
 }
-.two{
+
+.two {
   background-color:#FACF55;
   outline:5px solid #FACF55;
-  // border:#FFFFE0;
 }
+
 .three {
   background-color:white;
   outline:5px solid white;
@@ -199,14 +211,15 @@
     height:100%;
   }
 }
+
 .learn, .dance {
   @include desktop {
     width:100%;;
     height:100%;
     margin:0;
-
   }
 }
+
 .column {
   @include desktop {
     flex-basis: 40%;
@@ -215,20 +228,21 @@
     flex-direction: column;
   }
 }
+
 .title {
   @include desktop {
     width:60%;
     text-align: center;
     display:flex;
     flex-direction: column;
-
   }
-
 }
+
 .title-wrapper {
   display:flex;
   justify-content: center;
 }
+
 .fpi-wrapper {
   @include desktop {
     display:flex;
@@ -238,6 +252,7 @@
     margin-bottom:100px;
   }
 }
+
 .front-page-image {
   @include desktop {
     margin-top:20px;
@@ -249,6 +264,7 @@
     display:flex;
     justify-content: center;
     align-items: flex-end;
+
     .contact-us-img {
       background-color: #1A2776;
       color:#F6C11E;
@@ -259,6 +275,7 @@
       border:0;
       outline:none;
     }
+
     .book-now-img {
       background-color: #F6C11E;
       color:white;
@@ -269,6 +286,7 @@
       border:0;
       outline:none;
     }
+
     .bc-wrapper {
       margin-bottom: 50px;
     }
@@ -286,7 +304,6 @@
 
 .site-main {
   margin: 0 auto;
-
 }
 
 .page-header {

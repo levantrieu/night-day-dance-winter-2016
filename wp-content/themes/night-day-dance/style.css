@@ -1365,9 +1365,6 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-.fc-wrapper {
-  position: relative; }
-
 .fc-wrapper:before {
   display: none; }
   @media all and (min-width: 1024px) {
@@ -1383,6 +1380,7 @@ object {
       opacity: .5; } }
 
 .fc-wrapper {
+  position: relative;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1435,6 +1433,7 @@ object {
             -ms-flex-align: center;
                 align-items: center; }
       .fc-wrapper .button-wrapper {
+        text-transform: uppercase;
         height: 50%;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -1468,6 +1467,7 @@ object {
       width: 90%;
       height: 50%; }
       .mobile-title-wrapper .book-now {
+        text-transform: uppercase;
         border: none;
         background-color: #1A2776;
         color: white;
@@ -1477,6 +1477,7 @@ object {
         width: 90%;
         text-align: center; } }
   .mobile-title-wrapper .learn-moves {
+    text-transform: uppercase;
     border: none;
     background-color: #F6C11E;
     color: white;
@@ -1484,6 +1485,7 @@ object {
     width: 60%;
     text-align: center; }
   .mobile-title-wrapper .friends {
+    text-transform: uppercase;
     border: none;
     color: white;
     background-color: #D12021;
@@ -1519,7 +1521,7 @@ object {
   background-size: cover; }
 
 .learn {
-  background: linear-gradient(to bottom, rgba(206, 188, 33, 0.5) 0%, rgba(206, 188, 33, 0.5) 100%), url(../../images/landing-page-2.jpg) top no-repeat center;
+  background: linear-gradient(to bottom, rgba(206, 188, 33, 0.5) 0%, rgba(206, 188, 33, 0.5) 100%), url(../../images/landing-page-2.jpg) top -120px no-repeat center;
   background-size: cover; }
 
 .dance {

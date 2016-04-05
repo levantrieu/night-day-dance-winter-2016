@@ -40,17 +40,15 @@
   ) ); ?>
 </div>
 </div>
-    <div class="icon-wrapper">
+    <!-- <div class="icon-wrapper">
         <div class="icons"><i class="fa fa-facebook fa-lg"></i></div>
         <div class="icons"><i class="fa fa-twitter fa-lg"></i></div>
         <div class="icons"><i class="fa fa-instagram fa-lg"></i></div>
-      </div>
+      </div> -->
     </div>
   </div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
-
-<?php wp_footer(); ?>
 
 </body>
 </html>

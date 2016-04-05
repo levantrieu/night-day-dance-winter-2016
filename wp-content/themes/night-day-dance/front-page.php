@@ -17,7 +17,7 @@ get_header(); ?>
           <div class="now">
             <span class="book">book your</span>
           </div>
-          <button class="book-now" type="submit">Wedding package -></button>
+          <button class="book-now" type="submit">Wedding package <i class="fa fa-arrow-right"></i></button>
         </div>
       </span>
       <span class="border one">
@@ -29,7 +29,7 @@ get_header(); ?>
         <span class="mobile-title-wrapper">
           <h3 class="mt yellow">learn some new moves</h3>
 
-          <button class="learn-moves" type="submit">find your routine-></button>
+          <button class="learn-moves" type="submit">find your routine <i class="fa fa-arrow-right"></i></button>
 
         </span>
         <span class="border two">
@@ -40,7 +40,7 @@ get_header(); ?>
       <div class="dance">
         <span class="mobile-title-wrapper">
           <h3 class="mt red">office parties just<br>got exciting</h3>
-          <button class="friends" type="submit">dance with friends-></button>
+          <button class="friends" type="submit">dance with friends <i class="fa fa-arrow-right"></i></button>
         </span>
         <span class="border three">
           <h2>dance with <br>your <br>friends</h2>
