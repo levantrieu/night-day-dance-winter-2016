@@ -14,7 +14,7 @@ get_header(); ?>
       <span class="mobile-title-wrapper">
         <h3 class="mt">the first dance isn't<br> the last ...</h3>
       </span>
-      <form class="button-form">
+      <form class="button-form" action="/class-type/wedding/" method="get">
         <div class="now">
           <span class="book">book your</span>
         </div>
@@ -29,7 +29,7 @@ get_header(); ?>
         <span class="mobile-title-wrapper">
           <h3 class="mt yellow">learn some new moves</h3>
         </span>
-        <form class="lm">
+        <form class="lm" action="/class-type/individual/" method="get">
           <button class="learn-moves" type="submit">find your routine <i class="fa fa-arrow-right"></i></button>
         </form>
         <span class="border two">
@@ -41,7 +41,7 @@ get_header(); ?>
         <span class="mobile-title-wrapper">
           <h3 class="mt red">office parties just<br>got exciting</h3>
         </span>
-        <form class="df">
+        <form class="df" action="/class-type/group/" method="get">
           <button class="friends" type="submit">dance with friends <i class="fa fa-arrow-right"></i></button>
         </form>
         <span class="border three">
@@ -69,7 +69,7 @@ get_header(); ?>
       </form>
     </div>
   </div>
-    
+
   <!-- </main> -->
 </div><!-- #primary -->
 
