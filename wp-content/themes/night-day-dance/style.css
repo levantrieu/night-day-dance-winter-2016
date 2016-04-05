@@ -2059,8 +2059,7 @@ object {
   margin-bottom: 10px; }
   @media all and (min-width: 1024px) {
     .icon-wrapper {
-      padding-top: 10rem;
-      margin-right: 75px; } }
+      padding-top: 10rem; } }
 
 .icons {
   border: 2px solid;
