@@ -6,7 +6,7 @@
   text-transform:uppercase;
   text-align:center;
   font-size:2em;
-  padding-bottom:2em;
+  padding:3em 0 4em 0;
 }
 
 .related-loop-wrapper {
@@ -15,6 +15,7 @@
   align-items:center;
   display:flex;
   @include desktop {
+    padding-bottom:6em;
     flex-direction:row;
     width: 1000px;
     margin: 0 auto;

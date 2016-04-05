@@ -11,8 +11,6 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
   <div class="site-info">
-
-
 <div class="footer-form">
 <div class="form-wrapper">
 <div class="wrap">
@@ -42,18 +40,12 @@
   ) ); ?>
 </div>
 </div>
-
-
-    
-      <div class="icon-wrapper">
+    <div class="icon-wrapper">
         <div class="icons"><i class="fa fa-facebook fa-lg"></i></div>
         <div class="icons"><i class="fa fa-twitter fa-lg"></i></div>
         <div class="icons"><i class="fa fa-instagram fa-lg"></i></div>
       </div>
-
     </div>
-
-
   </div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->

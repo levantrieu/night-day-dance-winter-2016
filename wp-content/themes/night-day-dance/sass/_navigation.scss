@@ -8,7 +8,7 @@
 .responsive-nav-icon::before,
 .responsive-nav-close::before {
   cursor: pointer;
-  color: #000;
+  color: $color__brand-one;
   content: "\f0c9";
   font-family: FontAwesome;
   font-size: 36px;
@@ -97,7 +97,7 @@ fieldset {
 
 nav {
 
-  flex: 1 0 66%;
+  flex: 1 0 60%;
   display:flex;
   align-self:flex-end;
 }
@@ -187,9 +187,6 @@ nav .menu-item {
 /*--------------------------------------------------------------
 /*          end custom drawer style mobile navigation          */
 /*--------------------------------------------------------------*/
-.sub-menu {
-  background: #fff;
-}
 
 .ndd-logo img {
   padding: 20px 0 .4em 20px;
@@ -206,17 +203,17 @@ nav .menu-item {
 
 .site-branding  {
   display:flex;
-  flex: 0 1 33%;
+  flex: 0 1 40%;
 }
 
 
 /* Links */
 
 a {
-  color: $color__link;
+  color: $color__brand-one;
 
   &:visited {
-    color: $color__link-visited;
+    color: $color__brand-one;
   }
   &:hover,
   &:focus,
@@ -234,12 +231,24 @@ a {
 
 /* Menus */
 
-.menu-item-8 {
+.menu-item-107{
   padding-top: 105px;
-  @include desktop {
-    padding:0px;
+    @include desktop {
+      padding:0px;
   }
 }
+.sub-menu {
+  background: #fff;
+  // display:none; // sub-menu toggle code
+}
+// .menu-item-107.slide-parent {
+//   padding-top: 105px;
+//   @include desktop {
+//     // padding:0px;
+//   }
+// }
+
+// end sub-menu toggle code
 
 .main-navigation {
   clear: both;
@@ -331,7 +340,10 @@ a {
     position: relative;
     text-transform: uppercase;
     @include desktop {
-      padding-right: 15px;
+      padding-right: 45px;
+       &:last-child {
+        padding-right: 25px;
+      }
     }
 
     &:hover > a,
