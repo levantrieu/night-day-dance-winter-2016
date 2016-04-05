@@ -2539,6 +2539,10 @@ img {
           transform: translate(-50%, -50%);
   top: 45%;
   left: 50%; }
+  .pack-title a, .pack-title a:visited {
+    color: #282f72; }
+    .pack-title a:hover, .pack-title a:visited:hover {
+      color: #d12027; }
 
 .pack-link {
   width: 100px;

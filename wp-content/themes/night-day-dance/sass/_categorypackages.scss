@@ -183,6 +183,14 @@ img {
   transform: translate(-50%, -50%);
   top:45%;
   left:50%;
+
+  a, a:visited {
+    color: $color__brand-one;
+
+    &:hover {
+      color: $color__brand-three;
+    }
+  }
 }
 
 .pack-link {
