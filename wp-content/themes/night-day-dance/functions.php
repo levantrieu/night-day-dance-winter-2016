@@ -85,29 +85,15 @@ function red_starter_widgets_init() {
 	}
 	add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
 
-	/**
-	* enqueues our external fontawesome stylesheet to use for social icons and mobile menu
-	*/
-	function enqueue_fontawesome_stylesheets(){
-		wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
-	}
-	add_action('wp_enqueue_scripts','enqueue_fontawesome_stylesheets');
-
-// Enqueue custom mobile javascript
-		function ndd_adding_scripts() {
-			wp_enqueue_script('jquery');
-			wp_enqueue_script('mobile_script', get_template_directory_uri() . '/build/js/mobile-menu.min.js', array('jquery'),'1.1', true);
-	}
-
-	add_action( 'wp_enqueue_scripts', 'ndd_adding_scripts' );
-
-
 // Enqueue scripts and styles.
 		function red_starter_scripts() {
 			wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
 			wp_enqueue_style( 'font-awesome-cdn', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
 		wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+
+		wp_enqueue_script('jquery');
+		wp_enqueue_script('mobile_script', get_template_directory_uri() . '/build/js/mobile-menu.min.js', array('jquery'),'1.1', true);
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
