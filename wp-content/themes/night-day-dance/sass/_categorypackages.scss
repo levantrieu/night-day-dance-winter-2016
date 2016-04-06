@@ -208,7 +208,7 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   @include desktop {
-    width:1280px;
+    width:100%;
     margin:0 auto;
   }
 }
