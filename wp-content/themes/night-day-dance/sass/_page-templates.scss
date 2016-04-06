@@ -543,6 +543,8 @@ flex-direction: column;
   margin: 4rem 0;
   display: flex;
   justify-content: space-between;
+  max-width: 1500px;
+  margin: 0 auto;
   }
 }
 
@@ -607,7 +609,7 @@ flex-direction: column;
 .lm {
   display: none;
   visibility: 0;
-  
+
   @include desktop {
     display:flex;
     justify-content: center;

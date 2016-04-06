@@ -1907,7 +1907,9 @@ object {
       display: flex;
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
-              justify-content: space-between; } }
+              justify-content: space-between;
+      max-width: 1500px;
+      margin: 0 auto; } }
 
 .lifestyle-pic {
   -webkit-flex: 2 0 40%;
