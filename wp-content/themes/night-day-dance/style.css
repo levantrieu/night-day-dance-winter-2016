@@ -911,10 +911,10 @@ a {
   background: #fff;
   display: none; }
 
-.menu-item-8 .slide-parent {
+.menu-item-8.slide-parent {
   padding-top: 105px; }
   @media all and (min-width: 1024px) {
-    .menu-item-8 .slide-parent {
+    .menu-item-8.slide-parent {
       padding-top: 0px; } }
 
 .main-navigation {
