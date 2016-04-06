@@ -2681,6 +2681,9 @@ img {
   text-decoration: none;
   font-weight: 700; }
 
+.package-loop-parent {
+  max-width: 1500px; }
+
 .package-loop-wrapper:nth-child(odd) {
   display: -webkit-flex;
   display: -ms-flexbox;

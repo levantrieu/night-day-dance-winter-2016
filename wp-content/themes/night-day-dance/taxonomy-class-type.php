@@ -24,7 +24,7 @@ get_header(); ?>
 					</div>
 			</section>
 
-			<section>
+			<section class="package-loop-parent">
 				<div class="package-loop-wrapper">
 					<?php if ( have_posts() ) : ?>
 
