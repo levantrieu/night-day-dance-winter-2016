@@ -908,7 +908,14 @@ a {
       padding: 0px; } }
 
 .sub-menu {
-  background: #fff; }
+  background: #fff;
+  display: none; }
+
+.menu-item-8 .slide-parent {
+  padding-top: 105px; }
+  @media all and (min-width: 1024px) {
+    .menu-item-8 .slide-parent {
+      padding-top: 0px; } }
 
 .main-navigation {
   clear: both;
@@ -2817,8 +2824,7 @@ img {
         font-size: 1.5rem;
         width: 55%;
         text-align: center;
-        margin-top: 40px;
-        color: #91A8D0; } }
+        margin-top: 40px; } }
 
 .about-location {
   display: -webkit-flex;
@@ -2905,16 +2911,16 @@ img {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  border: none;
   height: 100px; }
   .about-buttons .about-book {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
+                -ms-grid-row-align: center;
             align-items: center;
     width: 100px;
     height: 30px;
@@ -2936,7 +2942,8 @@ img {
     width: 100px;
     height: 30px;
     background-color: #1A2776;
-    color: #F6C11E; }
+    color: #F6C11E;
+    border: none; }
     @media all and (min-width: 1024px) {
       .about-buttons .about-contact {
         display: none; } }
@@ -3057,8 +3064,7 @@ img {
         font-size: 1.5rem;
         width: 55%;
         text-align: center;
-        margin-top: 40px;
-        color: #91A8D0; } }
+        margin-top: 40px; } }
 
 .about-location {
   display: -webkit-flex;
@@ -3145,16 +3151,16 @@ img {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  border: none;
   height: 100px; }
   .about-buttons .about-book {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
+                -ms-grid-row-align: center;
             align-items: center;
     width: 100px;
     height: 30px;
@@ -3176,7 +3182,8 @@ img {
     width: 100px;
     height: 30px;
     background-color: #1A2776;
-    color: #F6C11E; }
+    color: #F6C11E;
+    border: none; }
     @media all and (min-width: 1024px) {
       .about-buttons .about-contact {
         display: none; } }

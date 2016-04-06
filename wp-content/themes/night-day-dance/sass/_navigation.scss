@@ -238,14 +238,14 @@ a {
 }
 .sub-menu {
   background: #fff;
-  // display:none; // sub-menu toggle code
+  display:none;
 }
-// .menu-item-107.slide-parent {
-//   padding-top: 105px;
-//   @include desktop {
-//     // padding:0px;
-//   }
-// }
+.menu-item-8 .slide-parent {
+  padding-top: 105px;
+  @include desktop {
+    padding-top: 0px;
+  }
+}
 
 // end sub-menu toggle code
 
